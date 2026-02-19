@@ -1,0 +1,17 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.loginBtn {
+    padding: 6px;
+    margin-top: 15px;
+    margin-left: auto;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: rgb(195 239 239);
+        border-radius: 12px;
+    }
+}
