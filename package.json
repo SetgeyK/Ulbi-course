@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --env port=3000",
     "start:dev:server": "node ./json-server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests yet\"",
     "build:prod": "npx webpack --env mode=production",
     "build:dev": "npx webpack --env mode=development",
     "lint:ts": "npx eslint \"**/*.{ts, tsx}\"",
