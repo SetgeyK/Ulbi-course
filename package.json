@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --env port=3000",
-    "start:dev:server": "node ./json-server/index.js",
+    "start:dev:server": "node ./json-server/index.mjs",
     "test": "echo \"No tests yet\"",
     "build:prod": "npx webpack --env mode=production",
     "build:dev": "npx webpack --env mode=development",
@@ -53,6 +53,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
+    "axios": "^1.13.5",
+    "jsonwebtoken": "^9.0.3",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-redux": "^9.2.0",
