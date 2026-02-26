@@ -1,0 +1,31 @@
+.item {
+    margin-top: 10px;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    margin-left: 10px;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+.icon {
+    fill: var(--secondary-color);
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.collapsed {
+    .item {
+        max-width: 24px;
+    }
+
+    .link { 
+        overflow: hidden;
+        opacity: 0;
+        width: 0;
+        transition: 0.3s opacity;
+    }
+}

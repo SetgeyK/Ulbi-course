@@ -10,11 +10,11 @@ interface LoginModalProps {
 }
 
 export const LoginModal = (props: LoginModalProps) => {
-    const {className, ...otherProps} = props
+    const {className, onClose, ...otherProps} = props
     return(
-        <Modal className={className} {...otherProps} lazy>
+        <Modal className={className} onClose={onClose} {...otherProps} lazy>
             <Suspense fallback={<Loader />} >
-                <LoginFormAsync />
+                <LoginFormAsync onSuccess={onClose} />
             </Suspense>
         </Modal>
     )

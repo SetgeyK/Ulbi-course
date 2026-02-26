@@ -21,6 +21,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Сергей",
+    "lastname": "Ко",
+    "age": "39",
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Krasnodar",
+    "username": "admin",
+    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee07e4e894.jpg"
   }
 }

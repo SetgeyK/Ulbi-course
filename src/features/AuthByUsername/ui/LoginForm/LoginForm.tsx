@@ -1,5 +1,5 @@
 import { memo, useCallback } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import cls from './LoginForm.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ButtonsSize, ButtonTheme } from 'shared/ui/Button/Button'
@@ -12,17 +12,18 @@ import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLogi
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError'
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 interface LoginFormProps {
-    className?: string
+    className?: string,
+    onSuccess: () => void
 }
 
 const initialReducers: ReducersList ={
     loginForm: loginReducer
 }
 
-const LoginForm = memo(({ className }: LoginFormProps) => {
-    const dispatch = useDispatch() 
+const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
+    const dispatch = useAppDispatch()
     const username = useSelector(getLoginUsername)
     const password = useSelector(getLoginPassword)
     const isLoading = useSelector(getLoginIsLoading)
@@ -36,10 +37,12 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
         dispatch(loginActions.setPassword(value))
     }, [dispatch])
 
-    const onLoginClick = useCallback(() => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (dispatch as any)(loginByUsername({username, password}))
-    }, [dispatch, username, password])
+    const onLoginClick = useCallback(async () => {
+        const result = await dispatch(loginByUsername({username, password}))
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccess()
+        }
+    }, [dispatch, username, password, onSuccess])
 
     return(
         <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
@@ -57,7 +60,7 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
                 placeholder='Введите пароль'
                 className={cls.input}
                 value={password}
-                onChange={onChangePassword}
+                onChange={onChangePassword} 
             />
                 <Button 
                 size={ButtonsSize.M}
