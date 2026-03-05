@@ -1,11 +1,22 @@
-import { configureStore, ReducersMapObject } from '@reduxjs/toolkit'
+import { configureStore, EnhancedStore, Reducer, ReducersMapObject, ThunkDispatch, UnknownAction } from '@reduxjs/toolkit'
+import { NavigateOptions, To } from 'react-router'
 
-import { StateSchema } from './StateSchema' 
+import { StateSchema, ThunkExtraArg } from './StateSchema' 
 import { counterReducer } from 'entities/Counter'
 import { userReducer } from 'entities/User'
 import { createReducerManager } from './reducerManager'
+import { $api } from 'shared/api/api'
 
-export function createReduxStore(initialState?: StateSchema) {
+export interface ExtendedStore extends EnhancedStore<StateSchema> {
+    reducerManager: ReturnType<typeof createReducerManager>;
+}
+
+
+export function createReduxStore(
+        initialState?: StateSchema,
+        asyncReducers?: ReducersMapObject<StateSchema>, 
+        navigate?: (to: To, options?: NavigateOptions) => void,
+    ) {
     const rootReducers: ReducersMapObject<StateSchema> = {
         counter: counterReducer,
         user: userReducer,
@@ -13,17 +24,25 @@ export function createReduxStore(initialState?: StateSchema) {
 
     const reducerManager = createReducerManager(rootReducers)
 
-    const store = configureStore<StateSchema>({
-        reducer: reducerManager.reduce,
+    const store = configureStore({
+        reducer: reducerManager.reduce as Reducer<StateSchema, UnknownAction>,
         devTools: __IS_DEV__,
-        preloadedState: initialState
-    })
+        preloadedState: initialState as unknown as StateSchema,
+        middleware: getDefaultMiddleware => getDefaultMiddleware({
+            thunk: {
+                extraArgument: {
+                    api: $api,
+                    navigate
+                }
+            }
+        })
+    }) as ExtendedStore
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     store.reducerManager = reducerManager
 
     return store
 }
 
-export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch']
+// export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch']
+
+export type AppDispatch = ThunkDispatch<StateSchema, ThunkExtraArg, UnknownAction>;

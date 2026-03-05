@@ -8,6 +8,8 @@ export function createReducerManager (initialReducers: ReducersMapObject<StateSc
 
     let keysToRemove: Array<StateSchemaKey> = []
 
+    type CombinedStateArg = Parameters<typeof combinedReducer>[0];
+
     return {
         getReducerMap: () => reducers,
         reduce: (state: StateSchema, action: UnknownAction) => {
@@ -19,7 +21,7 @@ export function createReducerManager (initialReducers: ReducersMapObject<StateSc
                 keysToRemove = []
             }
 
-            return combinedReducer(state, action)
+            return combinedReducer(state as CombinedStateArg, action) as StateSchema
         },
         add: (key: StateSchemaKey, reducer: Reducer) => {
             if (!key || reducers[key]) {
