@@ -8,23 +8,25 @@ import ProfilePageIcon from 'shared/assets/icons/profile-20-20.svg'
 export interface SidebarItemType {
     path: string,
     text: string,
-    Icon: FC<SVGProps<SVGSVGElement>>
+    Icon: FC<SVGProps<SVGSVGElement>>,
+    authOnly?: boolean
 }
 
 export const SidebarItemsList: SidebarItemType[] = [
     {
         path: RoutePath.main,
         text: 'Главная страница',
-        Icon: MainPageIcon
+        Icon: MainPageIcon,
     },
     {
         path: RoutePath.about,
         text: 'О сайте',
-        Icon: AboutPageIcon
+        Icon: AboutPageIcon,
     },
     {
         path: RoutePath.profile,
         text: 'Профиль',
-        Icon: ProfilePageIcon
+        Icon: ProfilePageIcon,
+        authOnly: true
     }
 ]

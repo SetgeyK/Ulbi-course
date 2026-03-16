@@ -9,16 +9,17 @@ export const fetchProfileData = createAsyncThunk<Profile, void, ThunkConfig<stri
         const {
             rejectWithValue,
             extra,
-            getState
+            // getState
         } = thunkAPI
-        const token = getState().user?.authData?.token
+        // const token = getState().user?.authData?.token
         try {
-            const response = await extra.api.get<Profile>('/profile', {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            })
-
+            const response = await extra.api.get<Profile>('/profile')
+            // const response = await extra.api.get<Profile>('/profile', {
+            //     headers: {
+            //         Authorization: `Bearer ${token}`
+            //     }
+            // })
+            
             return response.data
         } catch (e) {
             console.log(e)

@@ -1,17 +1,57 @@
 {
   "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 },
-    { "id": "3", "title": "another title", "views": 200 },
-    { "id": "4", "title": "another title", "views": 200 },
-    { "id": "5", "title": "another title", "views": 200 },
-    { "id": "6", "title": "another title", "views": 200 },
-    { "id": "7", "title": "another title", "views": 200 },
-    { "id": "8", "title": "another title", "views": 200 }
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "4",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "5",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "6",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "7",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "8",
+      "title": "another title",
+      "views": 200
+    }
   ],
   "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
   ],
   "users": [
     {
@@ -21,13 +61,13 @@
     }
   ],
   "profile": {
-    "first": "Сергей",
-    "lastname": "Ко",
-    "age": "39",
-    "currency": "RUB",
+    "first": "LK",
+    "lastname": "Ko",
+    "age": 39,
+    "currency": "USD",
     "country": "Russia",
     "city": "Krasnodar",
     "username": "admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee07e4e894.jpg"
+    "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
   }
 }
