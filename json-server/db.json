@@ -41,23 +41,86 @@
       "views": 200
     }
   ],
+  "articles": [
+    {
+      "id": "1",
+      "title": "Javascript news",
+      "subtitle": "Что нового в JS за 2026 год",
+      "img": "https://icons8.ru/icon/106036/javascript-%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "type": ["IT"],
+      "blocks": [
+        {
+        "id": "1",
+        "type": "TEXT",
+        "title": "Заголовок этого блока",
+        "paragraphs": [
+          "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+          "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+          "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+        ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    }
+  ],
   "comments": [
     {
       "id": "1",
       "text": "a comment about post 1",
-      "postId": "1"
+      "articledId": "1",
+      "userId": "1"
     },
     {
       "id": "2",
       "text": "another comment about post 1",
-      "postId": "1"
+      "articledId": "1",
+      "userId": "2"
+    },
+    {
+      "id": "3",
+      "text": "it's not intresting!",
+      "articledId": "1",
+      "userId": "2"
     }
   ],
   "users": [
     {
       "id": 1,
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "role": "ADMIN"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "777",
+      "role": "USER"
     }
   ],
   "profile": {
