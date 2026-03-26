@@ -114,13 +114,15 @@
       "id": 1,
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "777",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
     }
   ],
   "profile": {
