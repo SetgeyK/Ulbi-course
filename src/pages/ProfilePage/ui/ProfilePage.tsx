@@ -1,4 +1,5 @@
 import { useCallback, useEffect } from 'react'
+import { useParams } from 'react-router'
 import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
@@ -35,6 +36,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const error = useSelector(getProfileError)
     const readonly = useSelector(getProfileReadonly)
     const validateErrors = useSelector(getProfileValidateErrors)
+    const { id } = useParams<{id: string}>()
 
     const validateErrorTranslates = {
         [ValidateProfileError.INCORRECT_COUNTRY]: 'Некорректный регион',
@@ -77,8 +79,16 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     }, [dispatch])
 
     useEffect(() => {
-        dispatch(fetchProfileData())
-    }, [dispatch])
+        if(id) {
+            dispatch(fetchProfileData(id))
+        }
+    }, [dispatch, id])
+
+    if (!id) {
+        return (
+            <div className={classNames('', {}, [className])}>Пользователь не найден :(</div>
+        )
+    }
 
     return(
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>

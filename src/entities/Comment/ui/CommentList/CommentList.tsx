@@ -17,6 +17,16 @@ export const CommentList = (props: CommentListProps) => {
         comments
     } = props
 
+    if(isLoading) {
+        return (
+            <div className={classNames(cls.commentList, {}, [className])}>
+                <CommentCard isLoading />
+                <CommentCard isLoading />
+                <CommentCard isLoading />
+            </div>
+        )
+    }
+
     return(
         <div className={classNames(cls.commentList, {}, [className])}>
             {comments?.length

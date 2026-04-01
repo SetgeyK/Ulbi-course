@@ -49,17 +49,19 @@
       "img": "https://icons8.ru/icon/106036/javascript-%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF",
       "views": 1022,
       "createdAt": "26.02.2026",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
-        "id": "1",
-        "type": "TEXT",
-        "title": "Заголовок этого блока",
-        "paragraphs": [
-          "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-          "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-          "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-        ]
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         },
         {
           "id": "2",
@@ -107,6 +109,54 @@
       "text": "it's not intresting!",
       "articledId": "1",
       "userId": "2"
+    },
+    {
+      "artickId": "1",
+      "userId": 1,
+      "text": "fafsfsa",
+      "id": "tAW9MGR"
+    },
+    {
+      "artickId": "1",
+      "userId": 1,
+      "text": "fafsfsa",
+      "id": "I74D0tc"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "ffff",
+      "id": "nxop1tp"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "new comm",
+      "id": "jpHEfvs"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "comment from user",
+      "id": "rccrfDB"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "another comm from user",
+      "id": "ZIPdeDG"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "maybe me or maybe you",
+      "id": "mdOILqV"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "stop it !",
+      "id": "vFmmWF8"
     }
   ],
   "users": [
@@ -125,14 +175,28 @@
       "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
     }
   ],
-  "profile": {
-    "first": "LK",
-    "lastname": "LK",
-    "age": 39,
-    "currency": "USD",
-    "country": "Russia",
-    "city": "Krasnodar",
-    "username": "admin",
-    "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "LK",
+      "lastname": "LK",
+      "age": 39,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Krasnodar",
+      "username": "admin",
+      "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Sergey",
+      "lastname": "admin",
+      "age": 40,
+      "currency": "EUR",
+      "country": "Armenia",
+      "city": "Krasnodar",
+      "username": "sergey",
+      "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+    }
+  ]
 }

@@ -20,6 +20,7 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
     if(item.authOnly && !isAuth) {
         return null
     }
+
     return(
         <AppLink
             to={item.path}
