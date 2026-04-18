@@ -1,9 +1,10 @@
+import { Page } from 'shared/ui/Page/Page'
 
 const MainPage = () => {
     return(
-        <div>
+        <Page>
             MainPage
-        </div>
+        </Page>
     )
 }
 

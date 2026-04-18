@@ -27,13 +27,6 @@ export const ArticleList = (props: ArticleListProps) => {
         isLoading
     } = props
 
-    if(isLoading) {
-        return (
-            <div className={classNames(cls.articleList, {}, [className, cls[view]])} >
-                {getSkeletons(view)}
-            </div>
-        )
-    }
 
     const renderAtricle = (article: Article) => {
         return (
@@ -47,6 +40,7 @@ export const ArticleList = (props: ArticleListProps) => {
                 ? articles.map(renderAtricle)
                 : null 
             }
+            {isLoading && getSkeletons(view)}
         </div>
     )
 }

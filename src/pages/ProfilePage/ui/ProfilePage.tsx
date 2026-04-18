@@ -20,6 +20,7 @@ import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { Page } from 'shared/ui/Page/Page'
 
 const reducers: ReducersList = {
     profile: profileReducer
@@ -86,13 +87,13 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
     if (!id) {
         return (
-            <div className={classNames('', {}, [className])}>Пользователь не найден :(</div>
+            <Page className={classNames('', {}, [className])}>Пользователь не найден :(</Page>
         )
     }
 
     return(
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
                 {validateErrors?.length && validateErrors.map(err => (
                     <Text theme={TextTheme.ERROR} text={validateErrorTranslates[err]} key={err} />
@@ -111,7 +112,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
                     onChangeCountry={onChangeCountry}
                     readonly={readonly}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     )
 }
