@@ -70,7 +70,6 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
             />
         )
     } else {
-        if(article) {console.log(article.createdAt)}
         content = (
             <>
                 <div className={cls.avatarWrapper}>
