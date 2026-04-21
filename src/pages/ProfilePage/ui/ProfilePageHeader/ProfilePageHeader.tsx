@@ -16,7 +16,6 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
     const authData = useSelector(getUserAuthData)
     const profileData = useSelector(getProfileData)
     const canEdit = authData?.id === profileData?.id
-    console.log(authData, profileData)
     const readonly = useSelector(getProfileReadonly)
     const dispatch = useAppDispatch()
     

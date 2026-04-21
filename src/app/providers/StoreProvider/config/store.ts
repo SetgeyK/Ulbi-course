@@ -1,5 +1,4 @@
 import { configureStore, EnhancedStore, Reducer, ReducersMapObject, ThunkDispatch, UnknownAction } from '@reduxjs/toolkit'
-import { NavigateOptions, To } from 'react-router'
 
 import { StateSchema, ThunkExtraArg } from './StateSchema' 
 import { counterReducer } from 'entities/Counter'
@@ -15,7 +14,6 @@ export interface ExtendedStore extends EnhancedStore<StateSchema> {
 export function createReduxStore(
         initialState?: StateSchema,
         asyncReducers?: ReducersMapObject<StateSchema>, 
-        navigate?: (to: To, options?: NavigateOptions) => void,
     ) {
     const rootReducers: ReducersMapObject<StateSchema> = {
         counter: counterReducer,
@@ -32,7 +30,6 @@ export function createReduxStore(
             thunk: {
                 extraArgument: {
                     api: $api,
-                    navigate
                 }
             }
         })

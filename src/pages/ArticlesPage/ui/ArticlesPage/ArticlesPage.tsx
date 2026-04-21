@@ -7,9 +7,9 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { articlesPageAction, articlesPageReducer, gerArticles } from '../../modal/slices/articlesPageSlice'
 import { Page } from 'shared/ui/Page/Page'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { fetchArticlesList } from '../../modal/services/fetchArticlesList'
 import { getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView } from '../../modal/selectors/articlesPageSelectors'
 import { fetchNextArticlesPage } from '../../modal/services/fetchNextArticlesPage/fetchNextArticlesPage'
+import { initAtriclesPage } from '../../modal/services/initArticlesPage/initArticlesPage'
 
 interface ArticlesPageProps {
     className?: string
@@ -35,10 +35,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   }, [dispatch])
 
   useEffect(() => {
-    dispatch(articlesPageAction.initState())
-    dispatch(fetchArticlesList({
-      page: 1
-    }))
+    dispatch(initAtriclesPage())
   }, [dispatch])
 
   if(error) {

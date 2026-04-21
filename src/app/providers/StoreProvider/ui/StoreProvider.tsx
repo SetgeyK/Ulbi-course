@@ -3,7 +3,6 @@ import { Provider } from 'react-redux'
 
 import { createReduxStore } from '../config/store'
 import { StateSchema } from '../config/StateSchema'
-import { useNavigate } from 'react-router'
 import { ReducersMapObject } from '@reduxjs/toolkit'
 
 interface StoreProviderProps {
@@ -19,9 +18,8 @@ export const StoreProvider = (props: StoreProviderProps) => {
         asyncReducers
     } = props
 
-    const navigate = useNavigate()
 
-    const store = createReduxStore(initialState, asyncReducers, navigate)
+    const store = createReduxStore(initialState, asyncReducers)
     return(
         <Provider store={store}>
             {children}

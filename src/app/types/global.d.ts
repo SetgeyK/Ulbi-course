@@ -20,3 +20,8 @@ declare module "*.png" {
 
 declare const __IS_DEV__: boolean
 declare const __API__: string
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type OptionalRecord<K extends keyof any, T> = {
+  [P in K]?: T
+}
