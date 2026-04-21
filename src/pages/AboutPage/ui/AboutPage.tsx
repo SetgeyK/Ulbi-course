@@ -1,4 +1,4 @@
-import { Page } from 'shared/ui/Page/Page'
+import { Page } from 'widgets/Page/Page'
 
 const AboutPage = () => {
     return(

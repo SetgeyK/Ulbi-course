@@ -5,6 +5,7 @@ import { counterReducer } from 'entities/Counter'
 import { userReducer } from 'entities/User'
 import { createReducerManager } from './reducerManager'
 import { $api } from 'shared/api/api'
+import { scrollRestorationReducer } from 'features/ScrollRestoration'
 
 export interface ExtendedStore extends EnhancedStore<StateSchema> {
     reducerManager: ReturnType<typeof createReducerManager>;
@@ -18,6 +19,7 @@ export function createReduxStore(
     const rootReducers: ReducersMapObject<StateSchema> = {
         counter: counterReducer,
         user: userReducer,
+        scrollRestoration: scrollRestorationReducer
     }
 
     const reducerManager = createReducerManager(rootReducers)
