@@ -3,6 +3,7 @@ import cls from './ArticleList.module.scss'
 import { Article, ArticleView } from '../../modal/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
+import { Text, TextSize } from 'shared/ui/Text/Text'
 
 interface ArticleListProps {
     className?: string,
@@ -31,6 +32,14 @@ export const ArticleList = (props: ArticleListProps) => {
     const renderAtricle = (article: Article) => {
         return (
             <ArticleListItem article={article} view={view} key={article.id} className={cls.card} />
+        )
+    }
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div className={classNames(cls.articleList, {}, [className, cls[view]])}>
+                <Text text='Статьи не найдены' size={TextSize.L} />
+            </div>
         )
     }
 

@@ -28,7 +28,7 @@ export const Page = memo(({ className, children, onScrollEnd }: PageProps) => {
         callback: onScrollEnd
     })
 
-    const onScrol = useThrottle((e: UIEvent<HTMLDivElement>) => {
+    const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
         dispatch(scrollRestorationActions.setScroolPosition({
             path: pathname,
             position: e.currentTarget.scrollTop
@@ -43,10 +43,10 @@ export const Page = memo(({ className, children, onScrollEnd }: PageProps) => {
         <section 
             ref={wrapperRef}
             className={classNames(cls.page, {}, [className])}
-            onScroll={onScrol}
+            onScroll={onScroll}
         >
             {children}
-            <div ref={triggerRef}/>
+            {onScrollEnd && <div className={cls.trigger} ref={triggerRef}/>}
         </section>
     )
 })
