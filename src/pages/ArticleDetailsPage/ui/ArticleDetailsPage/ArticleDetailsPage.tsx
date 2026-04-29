@@ -13,13 +13,12 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { AddCommentForm } from 'features/addCommentForm'
 import { addCommentForAtricle } from '../../model/services/addCommentForArticle/addCommentForArticle'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { Page } from 'widgets/Page/Page'
 import { getArticleRecomendations } from '../../model/slices/articleDetailsRecomendationSlice'
 import { getArticleRecomendationIsLoading } from '../../model/selectors/recomendations'
 import { fetchArticlesRecomendations } from '../../model/services/fetchArticleRecomendations.ts/fetchArticleRecomendations.ts'
 import { articleDetaisPageReducer } from '../../model/slices'
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 
 interface ArticleDetailsPageProps {
     className?: string
@@ -32,15 +31,10 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
     const recomendationsIsLoading = useSelector(getArticleRecomendationIsLoading)
     const dispatch = useAppDispatch()
-    const navigate = useNavigate()
 
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForAtricle(text))
     }, [dispatch])
-
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles)
-    }, [navigate])
     
     useEffect(() => {
         dispatch(fetchCommentsByArticleId(id))
@@ -62,9 +56,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     return(
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
-                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-                    Назад к списку
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id}/>
                 <Text size={TextSize.L} title='Рекомендуем' className={cls.commentTitle} />
                 <ArticleList
