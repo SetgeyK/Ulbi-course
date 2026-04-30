@@ -7,7 +7,7 @@
     "start": "webpack serve --env port=3000",
     "start:dev:server": "node ./json-server/index.mjs",
     "test": "echo \"No tests yet\"",
-    "build:prod": "npx webpack --env mode=production",
+    "build:prod": "npx webpack --env mode=production apiUrl=https://project-an9j2.vercel.app",
     "build:dev": "npx webpack --env mode=development",
     "lint:ts": "npx eslint \"**/*.{ts, tsx}\"",
     "lint:ts:fix": "npx eslint \"**/*.{ts, tsx}\" --fix",

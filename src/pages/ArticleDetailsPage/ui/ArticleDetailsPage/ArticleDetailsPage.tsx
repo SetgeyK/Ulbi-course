@@ -1,5 +1,5 @@
 import { memo, useCallback, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router'
+import { useParams } from 'react-router'
 import cls from './ArticleDetailsPage.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { ArticleDetails, ArticleList } from 'entities/Article'
