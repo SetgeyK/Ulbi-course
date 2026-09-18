@@ -4,12 +4,13 @@
     "noImplicitAny": true,
     // "module": "es6",
     "module": "esnext",
-    "target": "es5",
+    "target": "es6",
     "jsx": "react-jsx",
     "allowJs": true,
     "strict": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
+    // "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    // "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]
     },

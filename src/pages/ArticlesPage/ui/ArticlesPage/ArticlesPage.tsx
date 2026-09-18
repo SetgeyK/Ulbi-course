@@ -52,6 +52,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
                 view={view}
                 articles={articles}
                 isLoading={isLoading}
+                onLoadNextPart={fetchNextArticlesPage}
               />
           </Page>
       </DynamicModuleLoader>

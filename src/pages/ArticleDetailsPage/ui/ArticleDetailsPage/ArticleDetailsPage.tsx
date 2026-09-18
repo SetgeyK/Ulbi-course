@@ -19,6 +19,7 @@ import { getArticleRecomendationIsLoading } from '../../model/selectors/recomend
 import { fetchArticlesRecomendations } from '../../model/services/fetchArticleRecomendations.ts/fetchArticleRecomendations.ts'
 import { articleDetaisPageReducer } from '../../model/slices'
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
+import { fetchNextArticlesPage } from 'pages/ArticlesPage/modal/services/fetchNextArticlesPage/fetchNextArticlesPage'
 
 interface ArticleDetailsPageProps {
     className?: string
