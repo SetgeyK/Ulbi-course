@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './ArticleDetailsPageHeader.module.scss'
 import { useSelector } from 'react-redux'
-import { getCanEditArticle } from 'pages/ArticleDetailsPage/model/selectors/article'
+import { getCanEditArticle } from '../../model/selectors/article'
 import { getArticleDetailsData } from 'entities/Article'
+import { HStack } from 'shared/ui/Stack'
 
 interface ArticleDetailsPageHeaderProps {
     className?: string
@@ -26,16 +26,15 @@ export const ArticleDetailsPageHeader = ({ className }: ArticleDetailsPageHeader
     }, [navigate, article])
 
     return(
-        <div className={classNames(cls.articleDetailsPageHeader, {}, [className])}>
+        <HStack max justify='between' className={classNames('', {}, [className])}>
             <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
                 Назад к списку
             </Button>
             {canUserEdit && <Button
-                className={cls.editBtn}
                 theme={ButtonTheme.OUTLINE}
                 onClick={onEditArticle}>
                 Редактировать
             </Button>}
-        </div>
+        </HStack>
     )
 }

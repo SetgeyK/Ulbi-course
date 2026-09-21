@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './ProfilePageHeader.module.scss'
 import { Text } from 'shared/ui/Text/Text'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { useSelector } from 'react-redux'
@@ -7,6 +6,7 @@ import { getProfileData, getProfileReadonly, profileActions, updateProfileData }
 import { useCallback } from 'react'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { getUserAuthData } from 'entities/User'
+import { HStack } from 'shared/ui/Stack/HStack/HStack'
 
 interface ProfilePageHeaderProps {
     className?: string
@@ -32,43 +32,40 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
     }, [dispatch])
 
     return(
-        <div className={classNames(cls.profilePageHeader, {}, [className])}>
+        <HStack max justify='between' className={classNames('', {}, [className])}>
             <Text 
                     title='Профиль'
                 />
                  
             { canEdit && (
-                <div className={cls.btnsWrapper}>
+                <>
                     {readonly
                             ? (
                                 <Button 
                                     theme={ButtonTheme.OUTLINE}
-                                    className={cls.editBtn}
                                     onClick={onEdit}
                                 >
                                     Редактировать
                                 </Button>
                             ) : (
-                                <>
+                                <HStack gap='8'>
                                     <Button
                                     theme={ButtonTheme.OUTLINE_RED}
-                                    className={cls.editBtn}
                                     onClick={onCancelEdit}
                                 >
                                         Отменить
                                     </Button>
                                     <Button
                                     theme={ButtonTheme.OUTLINE_GREEN}
-                                    className={cls.saveBtn}
                                     onClick={onSave}
                                 >
                                         Сохранить
                                     </Button>
-                                </>
+                                </HStack>
                             )
                         }
-                </div>
+                </>
             )}
-        </div>
+        </HStack>
     )
 }
