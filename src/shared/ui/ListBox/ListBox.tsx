@@ -10,14 +10,13 @@ import cls from './ListBox.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button } from '../Button/Button'
 import { HStack } from '../Stack'
+import { DropdownDirections } from 'shared/types/ui'
 
 export interface ListBoxItem {
     value: string;
     content: ReactNode;
     disabled?: boolean;
 }
-
-type DropdownDirections = 'top' | 'bottom'
 
 interface ListBoxProps {
     items?: ListBoxItem[];
@@ -39,11 +38,9 @@ export function Listbox(props: ListBoxProps) {
         defaultValue,
         onChange,
         readonly,
-        direction = 'bottom',
+        direction = 'bottom-right',
         label
     } = props
-
-    const optionsClasses = [cls[direction]]
 
     return (
         <HStack gap='8'>
@@ -61,7 +58,7 @@ export function Listbox(props: ListBoxProps) {
                     </Button>
                 </HListboxButton>
                 <HListboxOptions
-            className={classNames(cls.options, {}, optionsClasses)}
+            className={classNames(cls.options, {}, [cls[direction]])}
         >
                     {items?.map((item) => (
                         <HListboxOption

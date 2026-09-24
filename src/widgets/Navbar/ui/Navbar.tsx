@@ -8,6 +8,8 @@ import { getUserAuthData, userActions } from 'entities/User'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import { DropdownMenu } from 'shared/ui/Dropdown/Dropdown'
+import { Avatar } from 'shared/ui/Avatar/Avatar'
 
 interface NavbarProps {
     className?: string
@@ -44,13 +46,21 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     theme={AppLinkTheme.PRIMARY}>
                     Создать статью
                 </AppLink>
-                <Button 
-                    className={cls.links}
-                    theme={ButtonTheme.CLEAR_INVERTED}
-                    onClick={onLogout}
-                >
-                    Выйти
-                </Button>
+                <DropdownMenu 
+                    items={[
+                        {
+                            content: 'Профиль',
+                            href: RoutePath.profile + authData.id,
+                        },
+                        {
+                            content: 'Выйти',
+                            onClick: onLogout
+                        }
+                    ]}
+                    className={cls.dropdown}
+                    trigger={<Avatar size={30} src={authData.avatar}/>}
+                    direction='bottom-left'
+                />
                 <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
             </header>
         )

@@ -17,8 +17,24 @@
     box-shadow: 4px 4px 8px var(--listbox-bg);
     z-index: 1000;
 
-    &.top {
+    &.top-right{
         bottom: 100%;
+        left: 0;
+    }
+
+    &.top-left{
+        bottom: 100%;
+        right: 0;
+    }
+
+    &.bottom-right{
+        top: 100%;
+        left: 0;
+    }
+
+    &.bottom-left{
+        top: 100%;
+        right: 0;
     }
 }
 
