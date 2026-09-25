@@ -13,7 +13,8 @@
     "lint:ts:fix": "npx eslint \"**/*.{ts, tsx}\" --fix",
     "stylelint:scss": "npx stylelint \"**/*.scss\"",
     "stylelint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "generate:slice": "node ./scripts/createSlice/index.js"
   },
   "keywords": [],
   "author": "",

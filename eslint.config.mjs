@@ -36,4 +36,13 @@ export default defineConfig([
       '@sj_lk/sj-plugin/path-checker': 'error',
     },
   },
+  {
+    files: ['scripts/**/*.{js,cjs,mjs}'],
+    languageOptions: {
+      globals: globals.node,
+    },
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+  },
 ]);
