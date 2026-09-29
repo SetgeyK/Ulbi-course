@@ -6,6 +6,7 @@ import { userReducer } from 'entities/User'
 import { createReducerManager } from './reducerManager'
 import { $api } from 'shared/api/api'
 import { scrollRestorationReducer } from 'features/ScrollRestoration'
+import { rtkApi } from 'shared/api/rtkApi'
 
 export interface ExtendedStore extends EnhancedStore<StateSchema> {
     reducerManager: ReturnType<typeof createReducerManager>;
@@ -19,7 +20,8 @@ export function createReduxStore(
     const rootReducers: ReducersMapObject<StateSchema> = {
         counter: counterReducer,
         user: userReducer,
-        scrollRestoration: scrollRestorationReducer
+        scrollRestoration: scrollRestorationReducer,
+        [rtkApi.reducerPath]: rtkApi.reducer 
     }
 
     const reducerManager = createReducerManager(rootReducers)
@@ -34,7 +36,7 @@ export function createReduxStore(
                     api: $api,
                 }
             }
-        })
+        }).concat(rtkApi.middleware)
     }) as ExtendedStore
 
     store.reducerManager = reducerManager
