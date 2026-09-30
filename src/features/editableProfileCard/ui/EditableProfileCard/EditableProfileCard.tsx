@@ -1,5 +1,4 @@
-import { useCallback, useEffect, memo } from 'react'
-import { useParams } from 'react-router'
+import { useCallback, memo } from 'react'
 import { useSelector } from 'react-redux'
 import { Page } from 'widgets/Page/Page'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -19,6 +18,7 @@ import { ValidateProfileError } from '../../model/types/EditableProfileCardSchem
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 import { VStack } from 'shared/ui/Stack'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 
 
 interface EditableProfileCardProps {
@@ -31,14 +31,13 @@ const reducers: ReducersList = {
 }
 
 export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
-    const { className } = props
+    const { className, id } = props
     const dispatch = useAppDispatch()
     const formData = useSelector(getProfileForm)
     const isLoading = useSelector(getProfileIsLoading)
     const error = useSelector(getProfileError)
     const readonly = useSelector(getProfileReadonly)
     const validateErrors = useSelector(getProfileValidateErrors)
-    const { id } = useParams<{id: string}>()
 
     const validateErrorTranslates = {
         [ValidateProfileError.INCORRECT_COUNTRY]: 'Некорректный регион',
@@ -56,7 +55,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         dispatch(profileActions.updateProfile({lastname: value || ''}))
     }, [dispatch])
 
-    const onChangeAge = useCallback((value?: string) => {
+    const onChangeAge = useCallback((value? : string) => {
         dispatch(profileActions.updateProfile({age: Number(value || 0)}))
     }, [dispatch])
 
@@ -80,11 +79,11 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         dispatch(profileActions.updateProfile({country: country}))
     }, [dispatch])
 
-    useEffect(() => {
+    useInitialEffect(() => {
         if(id) {
             dispatch(fetchProfileData(id))
         }
-    }, [dispatch, id])
+    })
 
     if (!id) {
         return (
@@ -97,7 +96,12 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
             <VStack gap='16' max>
                 <EditableProfileCardHeader />
                 {validateErrors?.length && validateErrors.map(err => (
-                    <Text theme={TextTheme.ERROR} text={validateErrorTranslates[err]} key={err} />
+                    <Text
+                        theme={TextTheme.ERROR}
+                        text={validateErrorTranslates[err]}
+                        key={err}
+                        data-testid={'EditableProfileCard.Error'}
+                    />
                     ))}
                 <ProfileCard 
                         data={formData}

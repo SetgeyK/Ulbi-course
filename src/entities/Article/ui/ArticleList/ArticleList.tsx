@@ -19,7 +19,8 @@ interface ArticleListProps {
     isLoading?: boolean,
     view?: ArticleView,
     target?: HTMLAttributeAnchorTarget,
-    onLoadNextPart?: () => void 
+    onLoadNextPart?: () => void,
+    virtualized?: boolean
 }
 
 interface ArticleRowProps {
@@ -108,7 +109,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
         view = ArticleView.PLATE, 
         isLoading,
         target,
-        onLoadNextPart
+        onLoadNextPart,
+        virtualized = true
     } = props
 
 
@@ -176,17 +178,32 @@ export const ArticleList = memo((props: ArticleListProps) => {
         //     {isLoading && getSkeletons(view)}
         // </div>
         <div className={classNames(cls.articleList, {}, [className, cls[view]])}
-            style={{height: '700px', width: '100%', position: 'relative'}}
+            style={{ width: '100%', position: 'relative'}}
         >
-            <Grid
-            columnCount={ITEMS_PER_ROW}
-            columnWidth={view === ArticleView.PLATE ? 250 : 1000}
-            rowCount={rowCount}
-            rowHeight={view === ArticleView.PLATE ? 350 : 700}
-            cellComponent={Cell} 
-            cellProps={cellProps}
-            onScroll={handleScroll}
-            />
+            {virtualized
+                ? (
+                    <Grid
+                    columnCount={ITEMS_PER_ROW}
+                    columnWidth={view === ArticleView.PLATE ? 250 : 1000}
+                    rowCount={rowCount}
+                    rowHeight={view === ArticleView.PLATE ? 350 : 700}
+                    cellComponent={Cell} 
+                    cellProps={cellProps}
+                    onScroll={handleScroll}
+                    />
+                )
+                : (
+                    articles.map(article => (
+                        <ArticleListItem 
+                            article={article}
+                            view={view}
+                            target={target}
+                            key={article.id}
+                            className={cls.card}
+                        />
+                    ))
+                )
+            }
         </div>
 
 

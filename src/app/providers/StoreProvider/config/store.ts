@@ -18,6 +18,7 @@ export function createReduxStore(
         asyncReducers?: ReducersMapObject<StateSchema>, 
     ) {
     const rootReducers: ReducersMapObject<StateSchema> = {
+        ...asyncReducers,
         counter: counterReducer,
         user: userReducer,
         scrollRestoration: scrollRestorationReducer,
