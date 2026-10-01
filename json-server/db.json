@@ -1124,14 +1124,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "777",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "777",
+      "roles": ["MANAGER"],
       "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
     }
   ],
