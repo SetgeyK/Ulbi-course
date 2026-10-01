@@ -1117,6 +1117,30 @@
       "userId": "1",
       "text": "fasfsaf",
       "id": "7FOdQSt"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "fdasf",
+      "id": "6BdOFGE"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "fasdfsaf",
+      "id": "NILCCEM"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "fdafsf",
+      "id": "mB9o-nu"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "fasdfsafsaf",
+      "id": "rLv64iJ"
     }
   ],
   "users": [
@@ -1124,21 +1148,14 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "role": "ADMIN",
       "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "777",
-      "roles": ["USER"],
-      "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
-    },
-    {
-      "id": "3",
-      "username": "manager",
-      "password": "777",
-      "roles": ["MANAGER"],
+      "role": "USER",
       "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
     }
   ],
