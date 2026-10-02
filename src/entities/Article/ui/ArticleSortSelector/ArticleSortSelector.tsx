@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleSortSelector.module.scss'
 import { Select, SelectOption } from 'shared/ui/Select/Select'
+// import { ArticleSortFields } from '../../modal/consts/articleConsts'
 import { ArticleSortFields } from '../../modal/consts/articleConsts'
 import { SortOrder } from 'shared/types'
 
