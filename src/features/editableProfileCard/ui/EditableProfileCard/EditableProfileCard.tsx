@@ -14,7 +14,7 @@ import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/get
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateError'
 import { profileActions, profileReducer } from '../../model/slice/ProfileSlice'
-import { ValidateProfileError } from '../../model/types/EditableProfileCardSchema'
+import { ValidateProfileError } from '../../model/consts/consts'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 import { VStack } from 'shared/ui/Stack'
@@ -22,7 +22,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 
 
 interface EditableProfileCardProps {
-    id: string,
+    id?: string,
     className?: string
 }
 

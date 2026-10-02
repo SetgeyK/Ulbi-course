@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react'
+import { Suspense, useCallback, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import cls from './ArticleDetailsComments.module.scss'
 import { CommentList } from 'entities/Comment'
@@ -10,6 +10,7 @@ import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { AddCommentForm } from 'features/addCommentForm'
 import { VStack } from 'shared/ui/Stack'
+import { CommentCard } from 'entities/Comment/ui/CommentCard/CommentCard'
 
 
 
@@ -36,7 +37,9 @@ export const ArticleDetailsComments = ({ id }: ArticleDetailsCommentsProps) => {
     return(
         <VStack gap='16' max>
             <Text size={TextSize.L} title='Комментарии' className={cls.commentTitle} />
-            <AddCommentForm onSendComment={onSendComment}/>
+            <Suspense fallback={<CommentCard isLoading/>}>
+                <AddCommentForm onSendComment={onSendComment}/>
+            </Suspense>
             <CommentList isLoading={commentsIsLoading} comments={comments}/>
         </VStack>
     )

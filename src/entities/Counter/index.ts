@@ -1,5 +1,5 @@
 import { Counter } from './ui/Counter';
-import { CounterSchema } from './modal/types/CounterSchema';
+import { type CounterSchema } from './modal/types/CounterSchema';
 import { counterReducer } from './modal/slice/counterSlice';
 
 export {
