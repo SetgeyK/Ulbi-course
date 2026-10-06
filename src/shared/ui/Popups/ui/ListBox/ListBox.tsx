@@ -7,9 +7,10 @@ import {
 } from '@headlessui/react'
 
 import cls from './ListBox.module.scss'
+import popupCls from '../../styles/popup.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
-import { Button } from '../Button/Button'
-import { HStack } from '../Stack'
+import { Button } from '../../../Button/Button'
+import { HStack } from '../../../Stack/index'
 import { DropdownDirections } from 'shared/types/ui'
 
 export interface ListBoxItem {
@@ -44,45 +45,45 @@ export function Listbox(props: ListBoxProps) {
 
     return (
         <HStack gap='8'>
-            {label && <span className={readonly ? cls.disabled : ''}>{`${label}>`}</span>}
+            {label && <span className={readonly ? popupCls.disabled : ''}>{`${label}>`}</span>}
             <HListBox
-        as={'div'}
-        className={classNames(cls.listBox, {}, [className])}
-        value={value}
-        onChange={onChange}
-        disabled={readonly}
-    >
-                <HListboxButton as='div' disabled={readonly} className={cls.trigger}>
-                    <Button disabled={readonly}>
+                as={'div'}
+                className={classNames(popupCls.popup, {}, [className])}
+                value={value}
+                onChange={onChange}
+                disabled={readonly}
+            >
+                <HListboxButton as='div' disabled={readonly} className={popupCls.trigger}>
+                    <Button disabled={readonly} className={readonly ? popupCls.disabled : ''}>
                         {value ?? defaultValue}
                     </Button>
                 </HListboxButton>
                 <HListboxOptions
-            className={classNames(cls.options, {}, [cls[direction]])}
-        >
+                    className={classNames(`${cls.options} ${popupCls.listBoxOptions}`, {}, [popupCls[direction]])}
+                >
                     {items?.map((item) => (
                         <HListboxOption
-                        key={item.value}
-                        value={item.value}
-                        disabled={item.disabled}
-                        as={Fragment}
-                    >
+                            key={item.value}
+                            value={item.value}
+                            disabled={item.disabled}
+                            as={Fragment}
+                        >
                             {({ focus, selected }) => (
                                 <li
-                                className={classNames(
-                                    cls.item,
-                                    {
-                                        [cls.focus]: focus,
-                                        [cls.disabled]: item.disabled
-                                    }
-                                )}
-                            > 
+                                    className={classNames(
+                                        cls.item,
+                                        {
+                                            [popupCls.focus]: focus,
+                                            [popupCls.disabled]: item.disabled
+                                        }
+                                    )}
+                                > 
                                     {selected && <span>{'\u2705'}</span>}
                                     {item.content}
                                 </li>
-                    )}
+                            )}
                         </HListboxOption>
-        ))}
+                    ))}
                 </HListboxOptions>
             </HListBox>
         </HStack>

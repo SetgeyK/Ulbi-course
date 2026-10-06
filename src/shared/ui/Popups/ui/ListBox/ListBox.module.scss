@@ -1,0 +1,19 @@
+.options {
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px var(--listbox-bg);
+
+    :hover {
+        border-radius: 12px;
+    }
+}
+
+.item {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        margin-right: 2px;
+    }
+}
