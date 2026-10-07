@@ -1,5 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Code.module.scss'
+// eslint-disable-next-line @sj_lk/sj-plugin/path-checker
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import CopyIcon from 'shared/assets/icons/copy-20-20.svg'
 import { useCallback } from 'react'

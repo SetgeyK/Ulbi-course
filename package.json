@@ -71,6 +71,7 @@
     "axios": "^1.13.5",
     "jsonwebtoken": "^9.0.3",
     "react": "^19.2.3",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^19.2.3",
     "react-redux": "^9.2.0",
     "react-router": "^7.12.0",
