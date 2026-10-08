@@ -6,6 +6,7 @@
     opacity: 0;
     pointer-events: none;
     z-index: -1;
+    transition: opacity 0.3s ease-in-out, z-index 0.3s allow-discrete;
 }
 
 .content {
@@ -46,5 +47,11 @@
 
     .content {
         transform: translateY(0%);
+    }
+}
+
+.isClosing {
+    .content {
+        transform: translateY(100%);
     }
 }
