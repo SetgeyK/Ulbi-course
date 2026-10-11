@@ -3,55 +3,44 @@
     position: fixed;
     align-items: flex-end;
     inset: 0;
-    opacity: 0;
+    z-index: var(--modal-z-index);
     pointer-events: none;
-    z-index: -1;
-    transition: opacity 0.3s ease-in-out, z-index 0.3s allow-discrete;
+
+    &.opened {
+        pointer-events: auto;
+    }
 }
 
-.content {
+.overlayWrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sheet {
     position: relative;
     width: 100%;
-    height: 70%;
-    min-height: 100px;
-    padding: 20px;
+    height: calc(100vh + 100px); 
     background: var(--bg-color);
-    bottom: 0;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-    transition: 0.3s transform;
-    transform: translateY(100%);
+    padding: 30px 20px 20px;
+    
+    /* Важно: убираем прокрутку самой карточки, если свайпаем её */
+    touch-action: none; 
     overflow: hidden auto;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    &::before {
-        content: "";
-        position: relative;
-        display: block;
-        width: 100px;
-        height: 10px;
-        background: var(--bg-color);
-        margin: auto;
-        bottom: 40px;
-        border-radius: 12px;
-    }
 }
 
-.opened {
-    pointer-events: auto;
-    opacity: 1;
-    z-index: var(--modal-z-index);
-
-    .content {
-        transform: translateY(0%);
-    }
-}
-
-.isClosing {
-    .content {
-        transform: translateY(100%);
-    }
+.handle {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    opacity: 0.5;
 }
