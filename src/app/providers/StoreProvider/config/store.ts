@@ -1,12 +1,12 @@
 import { configureStore, EnhancedStore, Reducer, ReducersMapObject, ThunkDispatch, UnknownAction } from '@reduxjs/toolkit'
 
 import { StateSchema, ThunkExtraArg } from './StateSchema' 
-import { counterReducer } from 'entities/Counter'
-import { userReducer } from 'entities/User'
+import { counterReducer } from '@/entities/Counter'
+import { userReducer } from '@/entities/User'
 import { createReducerManager } from './reducerManager'
-import { $api } from 'shared/api/api'
-import { scrollRestorationReducer } from 'features/ScrollRestoration'
-import { rtkApi } from 'shared/api/rtkApi'
+import { $api } from '@/shared/api/api'
+import { scrollRestorationReducer } from '@/features/ScrollRestoration'
+import { rtkApi } from '@/shared/api/rtkApi'
 
 export interface ExtendedStore extends EnhancedStore<StateSchema> {
     reducerManager: ReturnType<typeof createReducerManager>;

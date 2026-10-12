@@ -5,11 +5,11 @@ import {
     userActions,
     isUserManager,
     getUserAuthData
-} from 'entities/User'
-import { Avatar } from 'shared/ui/Avatar/Avatar'
-import { DropdownMenu } from 'shared/ui/Popups/index'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+} from '@/entities/User'
+import { Avatar } from '@/shared/ui/Avatar/Avatar'
+import { DropdownMenu } from '@/shared/ui/Popups/index'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 
 interface AvatarDropdownProps {
     className?: string

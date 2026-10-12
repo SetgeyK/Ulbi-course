@@ -4,10 +4,10 @@ import {
     PopoverButton as HPopoverButton,
     PopoverPanel as HPopoverPanel
 } from '@headlessui/react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './Popover.module.scss'
 import popupCls from '../../styles/popup.module.scss'
-import { DropdownDirections } from 'shared/types/ui'
+import { DropdownDirections } from '@/shared/types/ui'
 
 interface PopoverProps {
     trigger: ReactNode,

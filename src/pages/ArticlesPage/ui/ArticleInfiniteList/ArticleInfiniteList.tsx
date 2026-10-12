@@ -1,11 +1,10 @@
 import { memo } from 'react'
 import { useSelector } from 'react-redux'
 import cls from './ArticleInfiniteList.module.scss'
-import { ArticleList } from 'entities/Article'
+import { ArticleList } from '@/entities/Article'
 import { gerArticles } from '../../modal/slices/articlesPageSlice'
 import { getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView } from '../../modal/selectors/articlesPageSelectors'
-import { fetchNextArticlesPage } from '../../modal/services/fetchNextArticlesPage/fetchNextArticlesPage'
-import { Text } from 'shared/ui/Text/Text'
+import { Text } from '@/shared/ui/Text/Text'
 
 export const ArticleInfiniteList = memo(() => {
     const articles = useSelector(gerArticles.selectAll)
@@ -23,7 +22,6 @@ export const ArticleInfiniteList = memo(() => {
             view={view}
             articles={articles}
             isLoading={isLoading}
-            onLoadNextPart={fetchNextArticlesPage}
         />
     )
 })

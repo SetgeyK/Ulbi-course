@@ -30,6 +30,7 @@
     /* Важно: убираем прокрутку самой карточки, если свайпаем её */
     touch-action: none; 
     overflow: hidden auto;
+    z-index: var(--modal-z-index);
 }
 
 .handle {

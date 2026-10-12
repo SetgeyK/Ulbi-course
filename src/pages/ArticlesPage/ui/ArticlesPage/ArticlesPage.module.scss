@@ -4,4 +4,9 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
