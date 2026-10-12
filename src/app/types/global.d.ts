@@ -1,3 +1,5 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 declare module '*.scss' {
   interface IClassNames {
     [className: string]: string
@@ -8,8 +10,10 @@ declare module '*.scss' {
 
 declare module "*.svg" {
     import React from "react";
-    const SVG: React.FC<React.SVGProps<SVGSVGElement>>;
-    export default SVG;
+    // const SVG: React.FC<React.SVGProps<SVGSVGElement>>;
+    const Component: React.FC<React.SVGProps<SVGSVGElement>>;
+    // export default SVG;
+    export default Component;
 
 }
 

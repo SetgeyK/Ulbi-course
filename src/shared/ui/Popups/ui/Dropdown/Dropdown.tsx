@@ -11,6 +11,7 @@ interface DropdownItem {
     content?: ReactNode;
     onClick?: () => void;
     href?: string;
+    id?: string
 }
 
 interface DropdownMenuProps {
@@ -59,7 +60,7 @@ export function DropdownMenu(props: DropdownMenuProps) {
                         )
                     }
                     return (
-                        <MenuItem as={Fragment} disabled={item.disabled} key={item.href}
+                        <MenuItem as={Fragment} disabled={item.disabled} key={item.id}
                         >
                             {content}
                         </MenuItem>
