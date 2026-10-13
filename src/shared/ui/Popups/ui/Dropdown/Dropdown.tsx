@@ -11,7 +11,6 @@ interface DropdownItem {
     content?: ReactNode;
     onClick?: () => void;
     href?: string;
-    id?: string
 }
 
 interface DropdownMenuProps {
@@ -35,7 +34,7 @@ export function DropdownMenu(props: DropdownMenuProps) {
                 {trigger}
             </MenuButton>
             <MenuItems className={classNames(`${cls.menu} ${popupCls.dropdownMenu}`, {}, [popupCls[direction]])} portal={false}>
-                {items.map(item => {
+                {items.map((item, index) => {
                     const content = ({focus}: {focus: boolean}) => (
                         <button 
                             type='button'
@@ -53,14 +52,14 @@ export function DropdownMenu(props: DropdownMenuProps) {
                             as={AppLink}
                             to={item.href}
                             disabled={item.disabled}
-                            key={item.href}
+                            key={'dropdown-key-' + index}
                         >
                                 {content}
                             </MenuItem>
                         )
                     }
                     return (
-                        <MenuItem as={Fragment} disabled={item.disabled} key={item.id}
+                        <MenuItem as={Fragment} disabled={item.disabled} key={'dropdown-key-' + index}
                         >
                             {content}
                         </MenuItem>

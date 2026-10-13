@@ -39,17 +39,14 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
                 ...(isAdminPanelAvalable ? [{
                     content: 'Админка',
                     href: RoutePath.admin_panel,
-                    id: '0'
                 }] : []),
                 {   
                     content: 'Профиль',
                     href: RoutePath.profile + authData.id,
-                    id: '1'
                 },
                 {
                     content: 'Выйти',
                     onClick: onLogout,
-                    id: '2'
                 }
                 ]}
                 trigger={<Avatar size={30} src={authData.avatar}/>}
