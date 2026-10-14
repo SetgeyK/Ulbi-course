@@ -47,7 +47,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
         handleRateArticle(starsCount, feedback)
     }, [handleRateArticle])
 
-        if(isLoading) {
+    if(isLoading) {
         return <Skeleton width={'100%'} height={120}/>
     }
 

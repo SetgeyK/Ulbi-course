@@ -4,6 +4,7 @@ import { RatingCard } from '@/entities/Rating'
 import { getUserAuthData } from '@/entities/User'
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton'
 import { useGetProfileRating, useRateProfile } from '../../api/profileRatingApi'
+import { getProfileForm } from '@/features/editableProfileCard/model/selectors/getProfileForm/getProfileForm'
 
 export interface ProfileRatingProps {
     className?: string,
@@ -16,6 +17,7 @@ const ProfileRating = memo((props: ProfileRatingProps) => {
         profileId
     } = props
     const userData = useSelector(getUserAuthData)
+    const profile = useSelector(getProfileForm)
     const {data, isLoading} = useGetProfileRating({
         profileId,
         userId: userData?.id ?? ''
@@ -47,13 +49,14 @@ const ProfileRating = memo((props: ProfileRatingProps) => {
         handleRateArticle(starsCount, feedback)
     }, [handleRateArticle])
 
-        if(isLoading) {
+    if(isLoading) {
         return <Skeleton width={'100%'} height={120}/>
     }
 
-    if(!profileId) {
+    if(!profile) {
         return null
     }
+
 
     return(
         <RatingCard
