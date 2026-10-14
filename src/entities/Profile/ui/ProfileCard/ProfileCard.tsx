@@ -52,7 +52,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if(error) {
         return (
-            <HStack justify='center' className={classNames(cls.profileCard, {}, [className, cls.error])}>
+            <HStack max justify='center' className={classNames(cls.profileCard, {}, [className, cls.error])}>
                 <Text
                     theme={TextTheme.ERROR}
                     title='Произошла ошибка при загрузке профиля'

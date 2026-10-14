@@ -1234,6 +1234,108 @@
       "city": "Krasnodar",
       "username": "sergey",
       "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+    },
+    {
+      "id": "3",
+      "first": "Manager",
+      "lastname": "Best",
+      "age": 40,
+      "currency": "EUR",
+      "country": "Armenia",
+      "city": "Krasnodar",
+      "username": "sergey",
+      "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 3,
+      "feedback": "Норм",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "id": "3",
+      "rate": 2,
+      "feedback": "Говно, не согласен, автор - мудак",
+      "userId": "1",
+      "articleId": "3"
+    },
+    {
+      "id": "4",
+      "rate": 5,
+      "feedback": "Умничка, много полезного",
+      "userId": "1",
+      "articleId": "4"
+    },
+    {
+      "id": "5",
+      "rate": 2,
+      "feedback": "Ничего не понятно, нихрена не интересно",
+      "userId": "2",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 4,
+      "id": "lQiu5G-"
+    },
+    {
+      "userId": "1",
+      "articleId": "6",
+      "rate": 1,
+      "id": "d71i86H"
+    },
+    {
+      "userId": "1",
+      "articleId": "8",
+      "rate": 5,
+      "feedback": "",
+      "id": "yOSfQJI"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 1,
+      "feedback": "стыдно писать такое, не разьираясь в материале! говно",
+      "id": "F3OzQ7i"
+    },
+    {
+      "userId": "3",
+      "articleId": "30",
+      "rate": 4,
+      "id": "r6GAj74"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "userId": "1",
+      "profileId": "1",
+      "rate": 5,
+      "id": "xW4uo_W"
+    },
+    {
+      "userId": "1",
+      "profileId": "2",
+      "rate": 1,
+      "feedback": "мутный тип",
+      "id": "v7zjRJv"
+    },
+    {
+      "userId": "3",
+      "profileId": "3",
+      "rate": 3,
+      "feedback": "Mudak!!!",
+      "id": "jEguXT4"
     }
   ]
 }

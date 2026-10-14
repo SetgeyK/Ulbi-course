@@ -9,12 +9,20 @@ export enum CardTheme {
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
     className?: string
     children: ReactNode
-    theme?: CardTheme
+    theme?: CardTheme,
+    max?: boolean
 }
 
-export const Card = ({ className, children, theme = CardTheme.NORMAL, ...otherProps }: CardProps) => {
+export const Card = ({
+        className,
+        children,
+        theme = CardTheme.NORMAL,
+        max,
+        ...otherProps
+    }: CardProps) => {
+
     return(
-        <div className={classNames(cls.card, {}, [className, cls[theme]])} {...otherProps}>
+        <div className={classNames(cls.card, {[cls.fullWidth]: max}, [className, cls[theme]])} {...otherProps}>
             {children}
         </div>
     )
