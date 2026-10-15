@@ -33,7 +33,7 @@ export default defineConfig([
       '@typescript-eslint/no-unused-vars': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
-      '@sj_lk/sj-plugin/path-checker': 'error',
+      '@sj_lk/sj-plugin/path-checker': ['error', { alias: '@' }],
     },
   },
   {

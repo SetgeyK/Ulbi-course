@@ -5,8 +5,6 @@ import {
     getArticlesPageOrder,
     getArticlesPageSearch,
     getArticlesPageSort,
-    getArticlesPageLimit,
-    getArticlesPageNum,
     getArticlesPageType
 } from '../../selectors/articlesPageSelectors';
 import { addQueryParams } from '@/shared/lib/url/addQueryParams/addQueryParams';
@@ -19,11 +17,9 @@ export const fetchArticlesList = createAsyncThunk<Article[], FetchArticlesListPr
     'articlesPage/fetchArticlesList',
     async (props, thunkApi) => {
         const { extra, rejectWithValue, getState } = thunkApi
-        // const limit = getArticlesPageLimit(getState())
         const sort = getArticlesPageSort(getState())
         const order = getArticlesPageOrder(getState())
         const search = getArticlesPageSearch(getState())
-        // const page = getArticlesPageNum(getState())
         const type = getArticlesPageType(getState())
 
         try {
@@ -36,8 +32,6 @@ export const fetchArticlesList = createAsyncThunk<Article[], FetchArticlesListPr
             const response = await extra.api.get<Article[]>('/articles', {
                 params: {
                     _expand: 'user',
-                    // _limit: limit,
-                    // _page: page,
                     _sort: sort,
                     _order: order,
                     q: search,
