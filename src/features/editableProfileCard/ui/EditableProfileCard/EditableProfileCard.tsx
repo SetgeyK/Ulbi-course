@@ -1,6 +1,6 @@
 import { useCallback, memo } from 'react'
 import { useSelector } from 'react-redux'
-import { Page } from '@/widgets/Page/Page'
+import { Page } from '@/widgets/Page'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { ProfileCard } from '@/entities/Profile'

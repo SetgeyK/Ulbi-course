@@ -34,6 +34,7 @@ export default defineConfig([
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
       '@sj_lk/sj-plugin/path-checker': ['error', { alias: '@' }],
+      '@sj_lk/sj-plugin/public-api-imports': ['error', { alias: '@' }],
     },
   },
   {
