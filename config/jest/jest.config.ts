@@ -28,7 +28,8 @@ export default {
         'node_modules',
     ],
     modulePaths: [
-        '<rootDir>src',
+        path.resolve(__dirname, '../../src'),
+        // '<rootDir>src',
     ],
     testMatch: [
         // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
@@ -37,6 +38,8 @@ export default {
     rootDir: '../../',
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
+        '^@/(.*)$': '<rootDir>/src/$1',
+
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },

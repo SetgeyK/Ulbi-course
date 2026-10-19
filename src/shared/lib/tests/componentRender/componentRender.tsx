@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
+import { MemoryRouter } from 'react-router';
 import { render } from '@testing-library/react'
 import { ReducersMapObject } from '@reduxjs/toolkit';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
-import { MemoryRouter } from 'react-router';
 
 export interface componentRenderOptions {
     route?: string,
