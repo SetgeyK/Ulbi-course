@@ -6,7 +6,7 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { ProfileCard } from '@/entities/Profile'
 import { Currency } from '@/entities/Currency'
 import { Country } from '@/entities/Country'
-import { Text, TextTheme } from '@/shared/ui/Text/Text'
+import { Text, TextTheme } from '@/shared/ui/Text'
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError'
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading'

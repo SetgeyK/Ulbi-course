@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { useNavigate } from 'react-router'
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useSelector } from 'react-redux'
 import { getCanEditArticle } from '../../model/selectors/article'

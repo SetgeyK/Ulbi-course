@@ -4,7 +4,7 @@ import cls from './ArticleInfiniteList.module.scss'
 import { ArticleList } from '@/entities/Article'
 import { gerArticles } from '../../modal/slices/articlesPageSlice'
 import { getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView } from '../../modal/selectors/articlesPageSelectors'
-import { Text } from '@/shared/ui/Text/Text'
+import { Text } from '@/shared/ui/Text'
 
 export const ArticleInfiniteList = memo(() => {
     const articles = useSelector(gerArticles.selectAll)

@@ -6,8 +6,8 @@ import {
     isUserManager,
     getUserAuthData
 } from '@/entities/User'
-import { Avatar } from '@/shared/ui/Avatar/Avatar'
-import { DropdownMenu } from '@/shared/ui/Popups/index'
+import { Avatar } from '@/shared/ui/Avatar'
+import { DropdownMenu } from '@/shared/ui/Popups'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { RoutePath } from '@/shared/const/router'
 

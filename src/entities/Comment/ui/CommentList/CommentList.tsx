@@ -1,5 +1,5 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Text } from '@/shared/ui/Text/Text'
+import { Text } from '@/shared/ui/Text'
 import { CommentCard } from '../CommentCard/CommentCard'
 import { Comment } from '../../model/types/comment'
 import { VStack } from '@/shared/ui/Stack'

@@ -3,7 +3,7 @@ import useTheme from '@/shared/lib/hooks/useTheme/useTheme'
 import { Theme } from '@/shared/const/theme'
 import LightThemeIcon from '@/shared/assets/icons/theme-light.svg'
 import DarkThemeIcon from '@/shared/assets/icons/theme-dark.svg'
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
 
 export const ThemeSwitcher = memo(() => {
     const { theme, toggleTheme } = useTheme()

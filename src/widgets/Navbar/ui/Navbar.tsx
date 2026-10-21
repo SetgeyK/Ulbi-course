@@ -5,12 +5,12 @@ import { LoginModal } from '@/features/AuthByUsername'
 import { AvatarDropdown } from '@/features/avatarDropdown'
 import { NotificationButton } from '@/features/notificationButton'
 import { getUserAuthData } from '@/entities/User'
-import { Text, TextTheme } from '@/shared/ui/Text/Text'
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink'
+import { Text, TextTheme } from '@/shared/ui/Text'
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink'
 import { HStack } from '@/shared/ui/Stack'
 import { RoutePath } from '@/shared/const/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
 
 interface NavbarProps {
     className?: string
