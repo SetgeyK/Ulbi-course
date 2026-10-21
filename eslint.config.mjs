@@ -40,6 +40,13 @@ export default defineConfig([
           alias: '@',
           testFilesPatterns: ['**/*.test.*']
         }],
+      '@sj_lk/sj-plugin/layer-imports': [
+        'error',
+        {
+          alias: '@',
+          ignoreImportPatterns: ['**/StoreProvider', '**/testing']
+        }
+      ]
     },
   },
   {
