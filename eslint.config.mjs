@@ -5,6 +5,7 @@ import eslintReactHooks from "eslint-plugin-react-hooks"
 import pluginReact from "eslint-plugin-react";
 import { defineConfig } from "eslint/config";
 import sjPlugin from "@sj_lk/eslint-plugin-sj-plugin";
+import unusedImport from 'eslint-plugin-unused-imports';
 
 export default defineConfig([
   js.configs.recommended,
@@ -17,7 +18,8 @@ export default defineConfig([
       '@typescript-eslint': tseslint.plugin,
       react: pluginReact,
       'react-hooks': eslintReactHooks,
-      '@sj_lk/sj-plugin': sjPlugin.default || sjPlugin
+      '@sj_lk/sj-plugin': sjPlugin.default || sjPlugin,
+      'unused-imports': unusedImport
     },
     settings: {
       react: {
@@ -46,7 +48,8 @@ export default defineConfig([
           alias: '@',
           ignoreImportPatterns: ['**/StoreProvider', '**/testing']
         }
-      ]
+      ],
+      'unused-imports/no-unused-imports': 'error'
     },
   },
   {
