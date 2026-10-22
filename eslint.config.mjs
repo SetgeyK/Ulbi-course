@@ -1,11 +1,12 @@
 import js from "@eslint/js";
+import sjPlugin from "@sj_lk/eslint-plugin-sj-plugin";
+import { defineConfig } from "eslint/config";
+import importPlugin from 'eslint-plugin-import';
+import pluginReact from "eslint-plugin-react";
+import eslintReactHooks from "eslint-plugin-react-hooks"
+import unusedImport from 'eslint-plugin-unused-imports';
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import eslintReactHooks from "eslint-plugin-react-hooks"
-import pluginReact from "eslint-plugin-react";
-import { defineConfig } from "eslint/config";
-import sjPlugin from "@sj_lk/eslint-plugin-sj-plugin";
-import unusedImport from 'eslint-plugin-unused-imports';
 
 export default defineConfig([
   js.configs.recommended,
@@ -19,7 +20,8 @@ export default defineConfig([
       react: pluginReact,
       'react-hooks': eslintReactHooks,
       '@sj_lk/sj-plugin': sjPlugin.default || sjPlugin,
-      'unused-imports': unusedImport
+      'unused-imports': unusedImport,
+      'import': importPlugin
     },
     settings: {
       react: {
@@ -49,7 +51,33 @@ export default defineConfig([
           ignoreImportPatterns: ['**/StoreProvider', '**/testing']
         }
       ],
-      'unused-imports/no-unused-imports': 'error'
+      'unused-imports/no-unused-imports': 'error',
+      'import/order': [
+        'error',
+        {
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            ['parent', 'sibling', 'index'],
+            'object',
+            'type'
+          ],
+          pathGroups: [
+            {
+              pattern: '@/**',
+              group: 'internal',
+              position: 'after'
+            }
+          ],
+          pathGroupsExcludedImportTypes: ['builtin', 'external'],
+          'newlines-between': 'always',
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true
+          }
+        }
+      ]
     },
   },
   {

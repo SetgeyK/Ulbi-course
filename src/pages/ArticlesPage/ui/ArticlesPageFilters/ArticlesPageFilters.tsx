@@ -1,16 +1,18 @@
 import { useCallback } from 'react'
 import { useSelector } from 'react-redux'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './ArticlesPageFilters.module.scss'
+
 import { ArticleView, ArticleViewSelector, ArticleSortSelector, ArticleSortFields, ArticleType, ArticleTypeTabs } from '@/entities/Article'
-import { getArticlesPageOrder, getArticlesPageSearch, getArticlesPageSort, getArticlesPageType, getArticlesPageView } from '../../modal/selectors/articlesPageSelectors'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { articlesPageAction } from '../../modal/slices/articlesPageSlice'
+import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
+import { SortOrder } from '@/shared/types'
 import { Card } from '@/shared/ui/Card'
 import { Input } from '@/shared/ui/Input'
-import { SortOrder } from '@/shared/types'
+
+import cls from './ArticlesPageFilters.module.scss'
+import { getArticlesPageOrder, getArticlesPageSearch, getArticlesPageSort, getArticlesPageType, getArticlesPageView } from '../../modal/selectors/articlesPageSelectors'
 import { fetchArticlesList } from '../../modal/services/fetchArticlesList/fetchArticlesList'
-import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
+import { articlesPageAction } from '../../modal/slices/articlesPageSlice'
 
 interface ArticlesPageFiltersProps {
     className?: string,

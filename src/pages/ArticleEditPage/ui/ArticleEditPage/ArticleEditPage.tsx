@@ -1,7 +1,9 @@
 import { useParams } from 'react-router'
+
 import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './ArticleEditPage.module.scss'
 import { Page } from '@/widgets/Page'
+
+import cls from './ArticleEditPage.module.scss'
 
 interface ArticleEditPageProps {
     className?: string

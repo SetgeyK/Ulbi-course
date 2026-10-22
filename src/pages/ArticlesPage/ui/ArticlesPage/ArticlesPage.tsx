@@ -1,17 +1,20 @@
 import { memo, useCallback, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router'
-import cls from './ArticlesPage.module.scss'
+
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Page } from '@/widgets/Page'
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { articlesPageReducer } from '../../modal/slices/articlesPageSlice'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { Page } from '@/widgets/Page'
+
+import cls from './ArticlesPage.module.scss'
 import { getArticlesPageError } from '../../modal/selectors/articlesPageSelectors'
 import { fetchNextArticlesPage } from '../../modal/services/fetchNextArticlesPage/fetchNextArticlesPage'
 import { initAtriclesPage } from '../../modal/services/initArticlesPage/initArticlesPage'
-import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
+import { articlesPageReducer } from '../../modal/slices/articlesPageSlice'
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList'
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
+
 
 interface ArticlesPageProps {
     className?: string

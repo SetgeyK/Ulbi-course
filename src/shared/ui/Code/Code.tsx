@@ -1,9 +1,9 @@
-import { classNames } from '@/shared/lib/classNames/classNames'
+import { useCallback } from 'react'
 import cls from './Code.module.scss'
+import { classNames } from '@/shared/lib/classNames/classNames'
 // eslint-disable-next-line @sj_lk/sj-plugin/path-checker
 import { Button, ButtonTheme } from '@/shared/ui/Button'
 import CopyIcon from '@/shared/assets/icons/copy-20-20.svg'
-import { useCallback } from 'react'
 
 interface CodeProps {
     className?: string,

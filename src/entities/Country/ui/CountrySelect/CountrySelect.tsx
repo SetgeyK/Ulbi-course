@@ -1,6 +1,8 @@
 import { memo, useCallback } from 'react'
-import { Country } from '../../model/types/country'
+
 import { Listbox } from '@/shared/ui/Popups'
+
+import { Country } from '../../model/types/country'
 
 interface CountrySelectProps {
     className?: string,

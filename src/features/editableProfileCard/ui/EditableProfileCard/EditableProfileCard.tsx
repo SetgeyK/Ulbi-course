@@ -1,24 +1,28 @@
 import { useCallback, memo } from 'react'
 import { useSelector } from 'react-redux'
-import { Page } from '@/widgets/Page'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { ProfileCard } from '@/entities/Profile'
-import { Currency } from '@/entities/Currency'
+
 import { Country } from '@/entities/Country'
+import { Currency } from '@/entities/Currency'
+import { ProfileCard } from '@/entities/Profile'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { VStack } from '@/shared/ui/Stack'
 import { Text, TextTheme } from '@/shared/ui/Text'
-import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
+// eslint-disable-next-line @sj_lk/sj-plugin/layer-imports
+import { Page } from '@/widgets/Page'
+
+import { ValidateProfileError } from '../../model/consts/consts'
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError'
+import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading'
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
-import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateError'
+import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
 import { profileActions, profileReducer } from '../../model/slice/ProfileSlice'
-import { ValidateProfileError } from '../../model/consts/consts'
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
-import { VStack } from '@/shared/ui/Stack'
-import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
+
 
 
 interface EditableProfileCardProps {

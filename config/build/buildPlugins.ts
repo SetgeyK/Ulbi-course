@@ -1,8 +1,9 @@
-import webpack from 'webpack'
+import CircularDependencyPlugin from 'circular-dependency-plugin'
 import HTMLWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import CircularDependencyPlugin from 'circular-dependency-plugin'
+import webpack from 'webpack'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+
 import { BuildOptions } from './types/config'
 
 export function buidlPlugins({paths, isDev, apiUrl, project}: BuildOptions): webpack.WebpackPluginInstance[] {
