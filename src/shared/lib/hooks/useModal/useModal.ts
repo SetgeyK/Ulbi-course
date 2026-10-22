@@ -7,6 +7,12 @@ interface useModalProps {
 
 }
 
+/**
+ * Переиспользуемый хук для модальных компонентов (drawer/modal)
+ * @param props (animationDelay, onClose, isOpen)
+ * @returns 
+ */
+
 export function useModal(props: useModalProps) {
     const {
         animationDelay,
