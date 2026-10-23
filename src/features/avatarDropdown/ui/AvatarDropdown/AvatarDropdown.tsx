@@ -1,15 +1,16 @@
 import { memo, useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+
 import {
     isUserAdmin,
     userActions,
     isUserManager,
     getUserAuthData
 } from '@/entities/User'
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { Avatar } from '@/shared/ui/Avatar'
 import { DropdownMenu } from '@/shared/ui/Popups'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import { RoutePath } from '@/shared/const/router'
 
 interface AvatarDropdownProps {
     className?: string
@@ -38,11 +39,11 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
             items={[
                 ...(isAdminPanelAvalable ? [{
                     content: 'Админка',
-                    href: RoutePath.admin_panel,
+                    href: getRouteAdminPanel(),
                 }] : []),
                 {   
                     content: 'Профиль',
-                    href: RoutePath.profile + authData.id,
+                    href: getRouteProfile(authData.id),
                 },
                 {
                     content: 'Выйти',
