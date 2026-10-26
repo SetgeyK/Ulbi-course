@@ -1,7 +1,9 @@
 import { useCallback, useMemo } from 'react'
+
+import { ArticleType } from '@/entities/Article'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { TabItem, Tabs } from '@/shared/ui/Tabs'
-import { ArticleType } from '../../modal/consts/articleConsts'
+
 
 interface ArticleTypeTabsProps {
     className?: string,
