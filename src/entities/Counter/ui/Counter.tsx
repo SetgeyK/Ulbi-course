@@ -1,22 +1,27 @@
-import { useDispatch, useSelector } from 'react-redux'
+
 import { Button } from '@/shared/ui/Button'
-import { counterActions } from '../modal/slice/counterSlice'
-import { getCounterValue } from '../modal/selectors/getCounterValue/getCounterValue'
+
+import { useCounterValue } from '../modal/selectors/getCounterValue/getCounterValue'
+import { useCounterActions } from '../modal/slice/counterSlice'
 
 export const Counter = () => {
-    const dispatch = useDispatch()
-    const counterValue = useSelector(getCounterValue)
-    const increment = () => {
-        dispatch(counterActions.increment())
+    const counterValue = useCounterValue()
+    const { add, decrement,increment } = useCounterActions()
+    const handleIncrement = () => {
+        increment()
     }
-    const decrement = () => {
-        dispatch(counterActions.decrement())
+    const handleDecrement = () => {
+        decrement()
+    }
+    const handleAddFive = () => {
+        add(5)
     }
     return(
         <div>
             <h1>{counterValue}</h1>
-            <Button onClick={increment}>increment</Button>
-            <Button onClick={decrement}>decrement</Button>
+            <Button onClick={handleIncrement}>increment</Button>
+            <Button onClick={handleDecrement}>decrement</Button>
+            <Button onClick={handleAddFive}>add five</Button>
         </div>
     )
 }
