@@ -2,7 +2,7 @@ import { Page } from '@/widgets/Page'
 
 const MainPage = () => {
     return(
-        <Page>
+        <Page dataTestid='MainPage'>
             MainPage
         </Page>
     )

@@ -1,7 +1,8 @@
+import { ReducersMapObject } from '@reduxjs/toolkit';
+import { render } from '@testing-library/react'
 import { ReactNode } from 'react';
 import { MemoryRouter } from 'react-router';
-import { render } from '@testing-library/react'
-import { ReducersMapObject } from '@reduxjs/toolkit';
+
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 
 export interface componentRenderOptions {

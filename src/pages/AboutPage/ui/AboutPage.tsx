@@ -2,7 +2,7 @@ import { Page } from '@/widgets/Page'
 
 const AboutPage = () => {
     return(
-        <Page>
+        <Page dataTestid='AboutPage' >
             About Page
         </Page>
     )

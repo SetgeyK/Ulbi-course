@@ -1,21 +1,24 @@
 import { memo, ReactNode, RefObject, UIEvent, useEffect, useRef } from 'react'
-import { useLocation } from 'react-router'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './Page.module.scss'
-import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll'
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { getScrolRestorationByPath, scrollRestorationActions } from '@/features/ScrollRestoration'
 import { useSelector } from 'react-redux'
+import { useLocation } from 'react-router'
+
 import { StateSchema } from '@/app/providers/StoreProvider'
+import { getScrolRestorationByPath, scrollRestorationActions } from '@/features/ScrollRestoration'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll'
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle'
+
+import cls from './Page.module.scss'
 
 interface PageProps {
     className?: string,
     children: ReactNode,
-    onScrollEnd?: () => void
+    onScrollEnd?: () => void,
+    dataTestid?: string
 }
 
-export const Page = memo(({ className, children, onScrollEnd }: PageProps) => {
+export const Page = memo(({ className, children, onScrollEnd, dataTestid = 'Page' }: PageProps) => {
     const wrapperRef = useRef<HTMLElement>(null) as RefObject<HTMLElement>
     const triggerRef = useRef<HTMLDivElement>(null) as RefObject<HTMLDivElement>
     const dispatch = useAppDispatch()
@@ -44,6 +47,7 @@ export const Page = memo(({ className, children, onScrollEnd }: PageProps) => {
             ref={wrapperRef}
             className={classNames(cls.page, {}, [className])}
             onScroll={onScroll}
+            data-testid={dataTestid}
         >
             {children}
             {onScrollEnd && <div className={cls.trigger} ref={triggerRef}/>}
