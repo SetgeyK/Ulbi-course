@@ -21,6 +21,9 @@
     "prepare": "husky",
     "generate:slice": "node ./scripts/createSlice/index.js"
   },
+  "lint-staged": {
+    "**/*.{ts, tsx}": "eslint"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -55,6 +58,7 @@
     "jest": "^30.5.2",
     "jest-environment-jsdom": "^30.5.2",
     "json-server": "^0.17.4",
+    "lint-staged": "^16.4.0",
     "mini-css-extract-plugin": "^2.9.4",
     "sass": "^1.97.2",
     "sass-loader": "^16.0.6",
