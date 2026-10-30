@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import sjPlugin from "@sj_lk/eslint-plugin-sj-plugin";
 import { defineConfig } from "eslint/config";
+import cypressPlugin from "eslint-plugin-cypress";
 import importPlugin from 'eslint-plugin-import';
 import pluginReact from "eslint-plugin-react";
 import eslintReactHooks from "eslint-plugin-react-hooks"
@@ -21,7 +22,7 @@ export default defineConfig([
       'react-hooks': eslintReactHooks,
       '@sj_lk/sj-plugin': sjPlugin.default || sjPlugin,
       'unused-imports': unusedImport,
-      'import': importPlugin
+      'import': importPlugin,
     },
     settings: {
       react: {
@@ -87,6 +88,32 @@ export default defineConfig([
     },
     rules: {
       '@typescript-eslint/no-require-imports': 'off',
+    },
+  },
+  {
+    files: ["cypress/**/*.{js,ts,jsx,tsx}", "cypress/**/*.cy.{js,ts,jsx,tsx}"],
+    plugins: {
+      cypress: cypressPlugin,
+    },
+    languageOptions: {
+      globals: {
+        cy: true,
+        cypress: true,
+        describe: true,
+        it: true,
+        before: true,
+        beforeEach: true,
+        after: true,
+        afterEach: true,
+        context: true,
+        expect: true,
+        assert: true
+      },
+    },
+    rules: {
+      "cypress/no-assigning-return-values": "error",
+      "cypress/no-unnecessary-waiting": "warn",
+      "cypress/assertion-before-screenshot": "warn"
     },
   },
 ]);

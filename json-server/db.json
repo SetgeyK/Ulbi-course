@@ -1210,6 +1210,16 @@
         "MANAGER"
       ],
       "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+    },
+    {
+      "id": "99",
+      "username": "testuser",
+      "password": "testpassword",
+      "roles": [
+        "ADMIN",
+        "MANAGER"
+      ],
+      "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
     }
   ],
   "profile": [

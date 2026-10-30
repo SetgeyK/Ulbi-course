@@ -1,16 +1,19 @@
 import { Suspense, useCallback, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import cls from './ArticleDetailsComments.module.scss'
+
 import { CommentList } from '@/entities/Comment'
-import { Text, TextSize } from '@/shared/ui/Text'
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { addCommentForAtricle } from '../../model/services/addCommentForArticle/addCommentForArticle'
-import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice'
-import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
-import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+import { CommentCard } from '@/entities/Comment'
 import { AddCommentForm } from '@/features/addCommentForm'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { VStack } from '@/shared/ui/Stack'
-import { CommentCard } from '@/entities/Comment/ui/CommentCard/CommentCard'
+import { Text, TextSize } from '@/shared/ui/Text'
+
+import cls from './ArticleDetailsComments.module.scss'
+import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
+import { addCommentForAtricle } from '../../model/services/addCommentForArticle/addCommentForArticle'
+import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice'
+
 
 
 
