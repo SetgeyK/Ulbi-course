@@ -1,13 +1,15 @@
-import cls from './ProfileCard.module.scss'
+import { Country, CountrySelect } from '@/entities/Country'
+import { Currency, CurrencySelect } from '@/entities/Currency'
 import { classNames, Mods } from '@/shared/lib/classNames/classNames'
-import { Profile } from '../../model/types/profile'
-import { Text, TextAlign, TextTheme } from '@/shared/ui/Text'
+import { Avatar } from '@/shared/ui/Avatar'
 import { Input } from '@/shared/ui/Input'
 import { Loader } from '@/shared/ui/Loader'
-import { Avatar } from '@/shared/ui/Avatar'
-import { Currency, CurrencySelect } from '@/entities/Currency'
-import { Country, CountrySelect } from '@/entities/Country'
 import { HStack, VStack } from '@/shared/ui/Stack'
+import { Text, TextAlign, TextTheme } from '@/shared/ui/Text'
+
+import cls from './ProfileCard.module.scss'
+import { Profile } from '../../model/types/profile'
+
 
 interface ProfileCardProps {
     className?: string,

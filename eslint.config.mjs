@@ -91,7 +91,11 @@ export default defineConfig([
     },
   },
   {
-    files: ["cypress/**/*.{js,ts,jsx,tsx}", "cypress/**/*.cy.{js,ts,jsx,tsx}"],
+    files: [
+      "cypress/**/*.{js,ts,jsx,tsx}",
+      "cypress/**/*.cy.{js,ts,jsx,tsx}",
+      "**/*.d.ts"
+    ],
     plugins: {
       cypress: cypressPlugin,
     },
@@ -111,9 +115,9 @@ export default defineConfig([
       },
     },
     rules: {
+      "@typescript-eslint/no-namespace": "off", 
       "cypress/no-assigning-return-values": "error",
       "cypress/no-unnecessary-waiting": "warn",
-      "cypress/assertion-before-screenshot": "warn"
     },
   },
 ]);

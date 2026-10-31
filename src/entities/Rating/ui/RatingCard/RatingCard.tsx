@@ -1,13 +1,14 @@
 import { useCallback, useState } from 'react'
 import { MobileView, BrowserView } from 'react-device-detect'
-import { Drawer } from '@/shared/ui/Drawer'
-import { Card } from '@/shared/ui/Card'
-import { HStack, VStack } from '@/shared/ui/Stack'
-import { Text } from '@/shared/ui/Text'
-import { StarRating } from '@/shared/ui/StarRating'
-import { Modal } from '@/shared/ui/Modal'
-import { Input } from '@/shared/ui/Input'
+
 import { Button, ButtonsSize, ButtonTheme } from '@/shared/ui/Button'
+import { Card } from '@/shared/ui/Card'
+import { Drawer } from '@/shared/ui/Drawer'
+import { Input } from '@/shared/ui/Input'
+import { Modal } from '@/shared/ui/Modal'
+import { HStack, VStack } from '@/shared/ui/Stack'
+import { StarRating } from '@/shared/ui/StarRating'
+import { Text } from '@/shared/ui/Text'
 
 interface RatingCardProps {
     className?: string,
@@ -56,12 +57,12 @@ export const RatingCard = (props: RatingCardProps) => {
     const modalContent = (
         <>
             <Text text={feedbackTitle} />
-            <Input placeholder='Ваш отзыв' value={feedback} onChange={setFeedback}/>
+            <Input placeholder='Ваш отзыв' value={feedback} onChange={setFeedback} data-testid='RatingCard.Input'/>
         </>
     )
 
     return(
-        <Card className={className} max>
+        <Card className={className} max data-testid='RatingCard'>
             <VStack align='center' gap='8'>
                 <Text title={starsCount ? 'Спасибо за оценку!' :  title}/>
                 <StarRating selectedStars={rate} size={40} onSelect={onSelectStart}/>
@@ -74,12 +75,14 @@ export const RatingCard = (props: RatingCardProps) => {
                             <Button
                             theme={ButtonTheme.OUTLINE_RED}
                             onClick={cancelHandler}
+                            data-testid='RatingCard.CloseBtn'
                         >
                                 Закрыть
                             </Button>
                             <Button
                             theme={ButtonTheme.OUTLINE_GREEN}
                             onClick={acceptHandler}
+                            data-testid='RatingCard.SendBtn'
                         >
                                 Отправить
                             </Button>

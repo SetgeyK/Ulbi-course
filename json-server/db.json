@@ -1255,6 +1255,17 @@
       "city": "Krasnodar",
       "username": "sergey",
       "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+    },
+    {
+      "id": "99",
+      "first": "Tester-Yura",
+      "lastname": "God",
+      "age": 99,
+      "currency": "EUR",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "bolvanchik",
+      "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
     }
   ],
   "article-ratings": [

@@ -1,8 +1,10 @@
+import { useState } from 'react'
+
+import StarIcon from '@/shared/assets/icons/star.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'
+
 import cls from './StarRating.module.scss'
 import { Icon } from '../Icon/Icon'
-import StarIcon from '@/shared/assets/icons/star.svg'
-import { useState } from 'react'
 
 interface StarRatingProps {
     className?: string,
@@ -62,6 +64,8 @@ export const StarRating = (props: StarRatingProps) => {
                     onMouseLeave={onLeave}
                     onMouseEnter={onHover(starNumber)}
                     onClick={onClick(starNumber)}
+                    data-testid={`StarsRating.${starNumber}`}
+                    data-selected={currentStarsCount >= starNumber}
                 />
             )
             )}
