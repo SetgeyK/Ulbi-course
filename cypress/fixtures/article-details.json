@@ -1,0 +1,33 @@
+{
+  "id": "8",
+  "title": "Javascript hot news",
+  "subtitle": "Что нового в Python за 2026 год",
+  "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+  "views": 176,
+  "createdAt": "12.05.2025",
+  "userId": "1",
+  "type": [
+    "IT"
+  ],
+  "blocks": [
+    {
+      "id": "1",
+      "type": "TEXT",
+      "title": "Заголовок этого блока",
+      "paragraphs": [
+        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+      ]
+    }
+  ],
+  "user": {
+    "id": "1",
+    "username": "admin",
+    "password": "123",
+    "roles": [
+      "ADMIN"
+    ],
+    "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+  }
+}
