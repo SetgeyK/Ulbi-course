@@ -97,5 +97,10 @@
   },
   "browserslist": [
     "defaults and fully supports es6-module"
-  ]
+  ],
+  "overrides": {
+    "eslint-plugin-cypress": {
+      "eslint": "$eslint"
+    }
+  }
 }

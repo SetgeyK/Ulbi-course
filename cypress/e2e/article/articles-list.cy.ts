@@ -1,5 +1,6 @@
 describe('Пользователь заходит на страницу со списком статей', () => {
   beforeEach(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     cy.login().then(data => {
       cy.visit('articles')
     })
