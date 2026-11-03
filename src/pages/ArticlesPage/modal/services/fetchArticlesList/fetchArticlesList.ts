@@ -8,21 +8,21 @@ import {
     getArticlesPageOrder,
     getArticlesPageSearch,
     getArticlesPageSort,
-    getArticlesPageType
+    getArticlesPageType,
 } from '../../selectors/articlesPageSelectors';
 
 interface FetchArticlesListProps {
-    replace?: boolean
+    replace?: boolean;
 }
 
 export const fetchArticlesList = createAsyncThunk<Article[], FetchArticlesListProps, ThunkConfig<string>>(
     'articlesPage/fetchArticlesList',
     async (props, thunkApi) => {
-        const { extra, rejectWithValue, getState } = thunkApi
-        const sort = getArticlesPageSort(getState())
-        const order = getArticlesPageOrder(getState())
-        const search = getArticlesPageSearch(getState())
-        const type = getArticlesPageType(getState())
+        const { extra, rejectWithValue, getState } = thunkApi;
+        const sort = getArticlesPageSort(getState());
+        const order = getArticlesPageOrder(getState());
+        const search = getArticlesPageSearch(getState());
+        const type = getArticlesPageType(getState());
 
         try {
             addQueryParams({
@@ -30,7 +30,7 @@ export const fetchArticlesList = createAsyncThunk<Article[], FetchArticlesListPr
                 order,
                 search,
                 type,
-            })
+            });
             const response = await extra.api.get<Article[]>('/articles', {
                 params: {
                     _expand: 'user',
@@ -38,15 +38,15 @@ export const fetchArticlesList = createAsyncThunk<Article[], FetchArticlesListPr
                     _order: order,
                     q: search,
                     type: type === ArticleType.ALL ? undefined : type,
-                }
-            })
+                },
+            });
             if (!response.data) {
-                return rejectWithValue('no data')
+                return rejectWithValue('no data');
             }
 
-            return response.data
+            return response.data;
         } catch (e) {
-            return rejectWithValue('error')
+            return rejectWithValue('error');
         }
-    }
-)
+    },
+);

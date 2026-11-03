@@ -7,21 +7,18 @@ import { Article } from '../../types/article';
 export const fetchArticleById = createAsyncThunk<Article, string, ThunkConfig<string>>(
     'articleDetails/fetchArticleById',
     async (articleId, thunkApi) => {
-        const {
-            rejectWithValue,
-            extra
-        } = thunkApi
+        const { rejectWithValue, extra } = thunkApi;
         try {
             const response = await extra.api.get<Article>(`/articles/${articleId}`, {
                 params: {
-                    _expand: 'user'
-                }
-            })
+                    _expand: 'user',
+                },
+            });
 
-            return response.data
+            return response.data;
         } catch (e) {
-            console.log(e)
-            return rejectWithValue('беда')
+            console.log(e);
+            return rejectWithValue('беда');
         }
-    }
-)
+    },
+);

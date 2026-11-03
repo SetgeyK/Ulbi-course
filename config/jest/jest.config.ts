@@ -13,20 +13,9 @@ export default {
     },
     clearMocks: true,
     testEnvironment: 'jsdom',
-    coveragePathIgnorePatterns: [
-        '\\\\node_modules\\\\',
-    ],
-    moduleFileExtensions: [
-        'js',
-        'jsx',
-        'ts',
-        'tsx',
-        'json',
-        'node',
-    ],
-    moduleDirectories: [
-        'node_modules',
-    ],
+    coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
+    moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
+    moduleDirectories: ['node_modules'],
     modulePaths: [
         path.resolve(__dirname, '../../src'),
         // '<rootDir>src',
@@ -41,7 +30,7 @@ export default {
         '\\.(jpg|jpeg|png|gif|webp)$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
         '\\.s?css$': 'identity-obj-proxy',
-        
+
         '^@/(.*)$': '<rootDir>/src/$1',
     },
     preset: 'ts-jest',
@@ -49,10 +38,10 @@ export default {
         '^.+\\.tsx?$': [
             'ts-jest',
             {
-                diagnostics: false
+                diagnostics: false,
             },
-        ]
-    }
+        ],
+    },
 
     // reporters: [
     //     'default',
@@ -63,7 +52,7 @@ export default {
     //         inlineSource: true,
     //     }],
     // ],
-    
+
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 

@@ -1,49 +1,53 @@
-import { configureStore, EnhancedStore, Reducer, ReducersMapObject, ThunkDispatch, UnknownAction } from '@reduxjs/toolkit'
+import {
+    configureStore,
+    EnhancedStore,
+    Reducer,
+    ReducersMapObject,
+    ThunkDispatch,
+    UnknownAction,
+} from '@reduxjs/toolkit';
 
-import { counterReducer } from '@/entities/Counter'
-import { userReducer } from '@/entities/User'
-import { scrollRestorationReducer } from '@/features/ScrollRestoration'
-import { $api } from '@/shared/api/api'
-import { rtkApi } from '@/shared/api/rtkApi'
+import { counterReducer } from '@/entities/Counter';
+import { userReducer } from '@/entities/User';
+import { scrollRestorationReducer } from '@/features/ScrollRestoration';
+import { $api } from '@/shared/api/api';
+import { rtkApi } from '@/shared/api/rtkApi';
 
-import { createReducerManager } from './reducerManager'
-import { StateSchema, ThunkExtraArg } from './StateSchema' 
+import { createReducerManager } from './reducerManager';
+import { StateSchema, ThunkExtraArg } from './StateSchema';
 
 export interface ExtendedStore extends EnhancedStore<StateSchema> {
     reducerManager: ReturnType<typeof createReducerManager>;
 }
 
-
-export function createReduxStore(
-        initialState?: StateSchema,
-        asyncReducers?: ReducersMapObject<StateSchema>, 
-    ) {
+export function createReduxStore(initialState?: StateSchema, asyncReducers?: ReducersMapObject<StateSchema>) {
     const rootReducers: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
         counter: counterReducer,
         user: userReducer,
         scrollRestoration: scrollRestorationReducer,
-        [rtkApi.reducerPath]: rtkApi.reducer 
-    }
+        [rtkApi.reducerPath]: rtkApi.reducer,
+    };
 
-    const reducerManager = createReducerManager(rootReducers)
+    const reducerManager = createReducerManager(rootReducers);
 
     const store = configureStore({
         reducer: reducerManager.reduce as Reducer<StateSchema, UnknownAction>,
         devTools: __IS_DEV__,
         preloadedState: initialState as unknown as StateSchema,
-        middleware: getDefaultMiddleware => getDefaultMiddleware({
-            thunk: {
-                extraArgument: {
-                    api: $api,
-                }
-            }
-        }).concat(rtkApi.middleware)
-    }) as ExtendedStore
+        middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware({
+                thunk: {
+                    extraArgument: {
+                        api: $api,
+                    },
+                },
+            }).concat(rtkApi.middleware),
+    }) as ExtendedStore;
 
-    store.reducerManager = reducerManager
+    store.reducerManager = reducerManager;
 
-    return store
+    return store;
 }
 
 // export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch']

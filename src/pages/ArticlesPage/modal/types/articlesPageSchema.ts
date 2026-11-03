@@ -4,18 +4,18 @@ import { Article, ArticleView } from '@/entities/Article';
 import { ArticleSortFields, ArticleType } from '@/entities/Article';
 import { SortOrder } from '@/shared/types/sort';
 
-export interface ArticlesPageSchema extends EntityState<Article, string> { 
-    isLoading?: boolean,
-    error?: string,
+export interface ArticlesPageSchema extends EntityState<Article, string> {
+    isLoading?: boolean;
+    error?: string;
     // pagination
-    page: number,
-    limit: number,
-    hasMore: boolean,
+    page: number;
+    limit: number;
+    hasMore: boolean;
     // filters
-    view: ArticleView,
-    order: SortOrder,
-    sort: ArticleSortFields,
-    search: string,
-    _inited: boolean,
-    type: ArticleType
+    view: ArticleView;
+    order: SortOrder;
+    sort: ArticleSortFields;
+    search: string;
+    _inited: boolean;
+    type: ArticleType;
 }

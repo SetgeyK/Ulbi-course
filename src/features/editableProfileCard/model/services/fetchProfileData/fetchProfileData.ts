@@ -10,20 +10,20 @@ export const fetchProfileData = createAsyncThunk<Profile, string, ThunkConfig<st
             rejectWithValue,
             extra,
             // getState
-        } = thunkAPI
+        } = thunkAPI;
         // const token = getState().user?.authData?.token
         try {
-            const response = await extra.api.get<Profile>(`/profile/${profileId}`)
+            const response = await extra.api.get<Profile>(`/profile/${profileId}`);
             // const response = await extra.api.get<Profile>('/profile', {
             //     headers: {
             //         Authorization: `Bearer ${token}`
             //     }
             // })
-            
-            return response.data
+
+            return response.data;
         } catch (e) {
-            console.log(e)
-            return rejectWithValue('Вы ввели неверный логин или пароль')
+            console.log(e);
+            return rejectWithValue('Вы ввели неверный логин или пароль');
         }
-    }
-)
+    },
+);

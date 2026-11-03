@@ -13,42 +13,42 @@ import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { rtkApi } from '@/shared/api/rtkApi';
 
 export interface StateSchema {
-    user: UserSchema,
-    counter: CounterSchema,
-    scrollRestoration: ScrollRestorationSchema,
-    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
+    user: UserSchema;
+    counter: CounterSchema;
+    scrollRestoration: ScrollRestorationSchema;
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
     // Асинхронные редюсеры
-    loginForm?: LoginSchema,
-    profile?: ProfileSchema,
-    articleDetails?: ArticleDetailsSchema,
-    addCommentForm?: AddCommentFormSchema,
-    articlesPage?: ArticlesPageSchema,
-    articleDetailsPage?: ArticleDetailsPageSchema,
+    loginForm?: LoginSchema;
+    profile?: ProfileSchema;
+    articleDetails?: ArticleDetailsSchema;
+    addCommentForm?: AddCommentFormSchema;
+    articlesPage?: ArticlesPageSchema;
+    articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
-export type StateSchemaKey = keyof StateSchema
+export type StateSchemaKey = keyof StateSchema;
 
-export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>
+export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>;
 
 export interface ReducerManager {
-    getReducerMap: () => ReducersMapObject<StateSchema>,
-    reduce: (state: StateSchema, action: UnknownAction) => StateSchema,
-    add: (key: StateSchemaKey, reducer: Reducer) => void,
-    remove: (key: StateSchemaKey) => void,
-    getMountedReducers: () => MountedReducers
+    getReducerMap: () => ReducersMapObject<StateSchema>;
+    reduce: (state: StateSchema, action: UnknownAction) => StateSchema;
+    add: (key: StateSchemaKey, reducer: Reducer) => void;
+    remove: (key: StateSchemaKey) => void;
+    getMountedReducers: () => MountedReducers;
 }
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
-    reducerManager: ReducerManager
+    reducerManager: ReducerManager;
 }
 
 export interface ThunkExtraArg {
-    api: AxiosInstance,
+    api: AxiosInstance;
 }
 
 export interface ThunkConfig<T> {
-    rejectValue: T,
-    extra: ThunkExtraArg,
-    state: StateSchema
+    rejectValue: T;
+    extra: ThunkExtraArg;
+    state: StateSchema;
 }

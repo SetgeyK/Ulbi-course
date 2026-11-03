@@ -6,31 +6,30 @@ import { Theme } from '@/shared/const/theme';
 import { ThemeContext } from '../../context/ThemeContext';
 
 function useTheme() {
-
-    const {theme, setTheme} = use(ThemeContext)
+    const { theme, setTheme } = use(ThemeContext);
     const toggleTheme = () => {
-        let newTheme: Theme
-        switch(theme) {
+        let newTheme: Theme;
+        switch (theme) {
             case Theme.DARK:
-                newTheme = Theme.LIGHT
-                break
+                newTheme = Theme.LIGHT;
+                break;
             case Theme.LIGHT:
-                newTheme = Theme.ORANGE
-                break
+                newTheme = Theme.ORANGE;
+                break;
             case Theme.ORANGE:
-                newTheme = Theme.DARK
-                break
+                newTheme = Theme.DARK;
+                break;
             default:
-                newTheme = Theme.LIGHT
+                newTheme = Theme.LIGHT;
         }
-        setTheme?.(newTheme)
-        localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
-    }
+        setTheme?.(newTheme);
+        localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+    };
 
-    return({
+    return {
         theme: theme || Theme.LIGHT,
-        toggleTheme
-    })
+        toggleTheme,
+    };
 }
 
-export default useTheme
+export default useTheme;

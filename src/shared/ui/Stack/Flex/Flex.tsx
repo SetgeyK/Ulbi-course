@@ -1,40 +1,40 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react'
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 
-import { classNames, Mods } from '@/shared/lib/classNames/classNames'
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
-import cls from './Flex.module.scss'
+import cls from './Flex.module.scss';
 
-export type FlexJustify = 'start' | 'center' | 'end' | 'between'
-export type FlexAlign = 'start' | 'center' | 'end'
-export type FlexDirection = 'row' | 'column'
-export type FlexGap = '4' | '8' | '16' | '32'
+export type FlexJustify = 'start' | 'center' | 'end' | 'between';
+export type FlexAlign = 'start' | 'center' | 'end';
+export type FlexDirection = 'row' | 'column';
+export type FlexGap = '4' | '8' | '16' | '32';
 
 const justifyClasses: Record<FlexJustify, string> = {
     start: cls.justifyStart,
     center: cls.justifyCenter,
     end: cls.justifyEnd,
     between: cls.justifyBetween,
-}
+};
 
 const directionClasses: Record<FlexDirection, string> = {
     row: cls.directionRow,
     column: cls.directionColumn,
-}
+};
 
 const alignClasses: Record<FlexAlign, string> = {
     start: cls.alignStart,
     center: cls.alignCenter,
     end: cls.alignEnd,
-}
+};
 
 const gapClasses: Record<FlexGap, string> = {
     4: cls.gap4,
     8: cls.gap8,
     16: cls.gap16,
     32: cls.gap32,
-}
+};
 
-type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 export interface FlexProps extends DivProps {
     className?: string;
@@ -56,23 +56,23 @@ export const Flex = (props: FlexProps) => {
         gap,
         max,
         ...otherProps
-    } = props
+    } = props;
 
     const classes = [
         className,
         justifyClasses[justify],
         alignClasses[align],
         directionClasses[direction],
-        gap && gapClasses[gap]
-    ]
+        gap && gapClasses[gap],
+    ];
 
     const mods: Mods = {
-        [cls.max]: max
-    }
+        [cls.max]: max,
+    };
 
-    return(
+    return (
         <div className={classNames(cls.flex, mods, classes)} {...otherProps}>
             {children}
         </div>
-    )
-}
+    );
+};

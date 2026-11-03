@@ -1,8 +1,5 @@
-import { ProfileCard } from './ui/ProfileCard/ProfileCard'
+import { ProfileCard } from './ui/ProfileCard/ProfileCard';
 
-import type { Profile } from './model/types/profile'
+import type { Profile } from './model/types/profile';
 
-export {
-    Profile,
-    ProfileCard
-}
+export { Profile, ProfileCard };

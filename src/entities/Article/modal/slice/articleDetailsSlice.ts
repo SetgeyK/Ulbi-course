@@ -8,7 +8,7 @@ const initialState: ArticleDetailsSchema = {
     isLoading: false,
     error: undefined,
     data: undefined,
-}
+};
 
 export const articleDetaisSlice = createSlice({
     name: 'articleDetail',
@@ -17,19 +17,19 @@ export const articleDetaisSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchArticleById.pending, (state) => {
-                state.isLoading = true
-                state.error = undefined
+                state.isLoading = true;
+                state.error = undefined;
             })
             .addCase(fetchArticleById.fulfilled, (state, action: PayloadAction<Article>) => {
-                state.data = action.payload
-                state.isLoading = false
+                state.data = action.payload;
+                state.isLoading = false;
             })
             .addCase(fetchArticleById.rejected, (state, action) => {
-                state.isLoading = false
-                state.error = action.payload
-            })
-    }
-})
+                state.isLoading = false;
+                state.error = action.payload;
+            });
+    },
+});
 
-export const { actions: articleDetailsActions } = articleDetaisSlice
-export const { reducer: articleDetailsReducer } = articleDetaisSlice
+export const { actions: articleDetailsActions } = articleDetaisSlice;
+export const { reducer: articleDetailsReducer } = articleDetaisSlice;
