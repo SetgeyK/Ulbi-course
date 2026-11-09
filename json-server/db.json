@@ -1151,6 +1151,10 @@
             "username": "admin",
             "password": "123",
             "roles": ["ADMIN"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
             "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
         },
         {
@@ -1158,6 +1162,10 @@
             "username": "user",
             "password": "777",
             "roles": ["USER"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": false
+            },
             "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
         },
         {
@@ -1165,6 +1173,10 @@
             "username": "manager",
             "password": "123",
             "roles": ["MANAGER"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": true
+            },
             "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
         },
         {
@@ -1172,6 +1184,10 @@
             "username": "testuser",
             "password": "testpassword",
             "roles": ["ADMIN", "MANAGER"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
             "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
         }
     ],
