@@ -9,9 +9,10 @@ import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesLi
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 
 const articlesAdapter = createEntityAdapter<Article>({});
+const defaultArticlesAdapter = articlesAdapter.getInitialState();
 
 export const gerArticles = articlesAdapter.getSelectors<StateSchema>(
-    (state) => state.articlesPage || articlesAdapter.getInitialState(),
+    (state) => state.articlesPage || defaultArticlesAdapter,
 );
 
 const articlePageSlice = createSlice({

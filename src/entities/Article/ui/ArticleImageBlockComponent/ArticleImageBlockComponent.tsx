@@ -1,23 +1,23 @@
-import { memo } from 'react'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './ArticleImageBlockComponent.module.scss'
-import { ArticleImageBlock } from '../../modal/types/article'
-import { Text, TextAlign } from '@/shared/ui/Text'
+import { memo } from 'react';
+
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text, TextAlign } from '@/shared/ui/Text';
+
+import cls from './ArticleImageBlockComponent.module.scss';
+import { ArticleImageBlock } from '../../modal/types/article';
 
 interface ArticleImageBlockComponentProps {
-    className?: string,
-    block: ArticleImageBlock
+    className?: string;
+    block: ArticleImageBlock;
 }
 
 export const ArticleImageBlockComponent = memo(({ className, block }: ArticleImageBlockComponentProps) => {
-    return(
+    return (
         <div className={classNames(cls.articleImageBlockComponent, {}, [className])}>
-            <img src={block.src} className={cls.img} alt={block.title} />
-            {block.title && (
-                <Text text={block.title} align={TextAlign.CENTER} />
-            )}
+            <img src={block.src || undefined} className={cls.img} alt={block.title} />
+            {block.title && <Text text={block.title} align={TextAlign.CENTER} />}
         </div>
-    )
-})
+    );
+});
 
-ArticleImageBlockComponent.displayName = 'ArticleImageBlockComponent'
+ArticleImageBlockComponent.displayName = 'ArticleImageBlockComponent';
