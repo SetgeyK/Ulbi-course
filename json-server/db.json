@@ -1,1337 +1,1428 @@
 {
-    "notifications": [
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Уведомление 2",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "https://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Уведомление 3",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "https://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "Уведомление 4",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
+      "userId": "2"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "4",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "5",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "6",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "7",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "8",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "articles": [
+    {
+      "id": "1",
+      "title": "Javascript news",
+      "subtitle": "Что нового в JS за 2026 год",
+      "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
+      "views": 122,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
         {
-            "id": "1",
-            "title": "Уведомление 1",
-            "description": "Произошло какое-то событие",
-            "userId": "1"
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         },
         {
-            "id": "2",
-            "title": "Уведомление 2",
-            "description": "Произошло какое-то событие",
-            "userId": "1",
-            "href": "https://localhost:3000/admin"
+          "id": "2",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
         },
         {
-            "id": "3",
-            "title": "Уведомление 3",
-            "description": "Произошло какое-то событие",
-            "userId": "1",
-            "href": "https://localhost:3000/admin"
+          "id": "3",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Рисунок 1 - скриншот сайта"
         },
         {
-            "id": "4",
-            "title": "Уведомление 4",
-            "description": "Произошло какое-то событие",
-            "userId": "1"
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
         },
         {
-            "id": "5",
-            "title": "Уведомление 1",
-            "description": "Произошло какое-то событие",
-            "userId": "2"
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         }
-    ],
-    "posts": [
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Javascript news",
+      "subtitle": "Что нового в Python за 2026 год",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+      "views": 1022,
+      "createdAt": "17.03.2022",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
         {
-            "id": "1",
-            "title": "a title",
-            "views": 100
-        },
-        {
-            "id": "2",
-            "title": "another title",
-            "views": 200
-        },
-        {
-            "id": "3",
-            "title": "another title",
-            "views": 200
-        },
-        {
-            "id": "4",
-            "title": "another title",
-            "views": 200
-        },
-        {
-            "id": "5",
-            "title": "another title",
-            "views": 200
-        },
-        {
-            "id": "6",
-            "title": "another title",
-            "views": 200
-        },
-        {
-            "id": "7",
-            "title": "another title",
-            "views": 200
-        },
-        {
-            "id": "8",
-            "title": "another title",
-            "views": 200
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         }
-    ],
-    "articles": [
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Javascript news",
+      "subtitle": "Что нового в Kotlin за 2026 год",
+      "img": "https://img.icons8.com/color/1200/kotlin.jpg",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
         {
-            "id": "1",
-            "title": "Javascript news",
-            "subtitle": "Что нового в JS за 2026 год",
-            "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
-            "views": 122,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "CODE",
-                    "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
-                },
-                {
-                    "id": "3",
-                    "type": "IMAGE",
-                    "src": "",
-                    "title": "Рисунок 1 - скриншот сайта"
-                },
-                {
-                    "id": "4",
-                    "type": "CODE",
-                    "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "2",
-            "title": "Javascript news",
-            "subtitle": "Что нового в Python за 2026 год",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
-            "views": 1022,
-            "createdAt": "17.03.2022",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "3",
-            "title": "Javascript news",
-            "subtitle": "Что нового в Kotlin за 2026 год",
-            "img": "https://img.icons8.com/color/1200/kotlin.jpg",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "4",
-            "title": "Javascript news",
-            "subtitle": "Что нового в JS за 2026 год",
-            "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
-            "views": 22,
-            "createdAt": "20.04.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "CODE",
-                    "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
-                },
-                {
-                    "id": "3",
-                    "type": "IMAGE",
-                    "src": "",
-                    "title": "Рисунок 1 - скриншот сайта"
-                },
-                {
-                    "id": "4",
-                    "type": "CODE",
-                    "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "5",
-            "title": "Javascript news",
-            "subtitle": "Что нового в Python за 2026 год",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
-            "views": 232,
-            "createdAt": "23.02.2025",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "6",
-            "title": "Clode news",
-            "subtitle": "Что нового в Kotlin за 2026 год",
-            "img": "https://img.icons8.com/color/1200/kotlin.jpg",
-            "views": 982,
-            "createdAt": "22.11.2023",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "7",
-            "title": "Python  news",
-            "subtitle": "Что нового в JS за 2026 год",
-            "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
-            "views": 221,
-            "createdAt": "06.02.2025",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "CODE",
-                    "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
-                },
-                {
-                    "id": "3",
-                    "type": "IMAGE",
-                    "src": "",
-                    "title": "Рисунок 1 - скриншот сайта"
-                },
-                {
-                    "id": "4",
-                    "type": "CODE",
-                    "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "8",
-            "title": "Javascript hot news",
-            "subtitle": "Что нового в Python за 2026 год",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
-            "views": 176,
-            "createdAt": "12.05.2025",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "9",
-            "title": "any news ?",
-            "subtitle": "Что нового в Kotlin за 2026 год",
-            "img": "https://img.icons8.com/color/1200/kotlin.jpg",
-            "views": 1987,
-            "createdAt": "17.08.2025",
-            "userId": "1",
-            "type": ["ECONOMICS"],
-            "blocks": [
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "10",
-            "title": "Javascript news",
-            "subtitle": "Что нового в JS за 2026 год",
-            "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
-            "views": 1200,
-            "createdAt": "22.04.2024",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "CODE",
-                    "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
-                },
-                {
-                    "id": "3",
-                    "type": "IMAGE",
-                    "src": "",
-                    "title": "Рисунок 1 - скриншот сайта"
-                },
-                {
-                    "id": "4",
-                    "type": "CODE",
-                    "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "11",
-            "title": "Javascript news",
-            "subtitle": "Что нового в Python за 2026 год",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
-            "views": 1202,
-            "createdAt": "13.07.2024",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "12",
-            "title": "Javascript news",
-            "subtitle": "Что нового в Kotlin за 2026 год",
-            "img": "https://img.icons8.com/color/1200/kotlin.jpg",
-            "views": 3452,
-            "createdAt": "28.09.2025",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "13",
-            "title": "Javascript news",
-            "subtitle": "Что нового в JS за 2026 год",
-            "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
-            "views": 294,
-            "createdAt": "18.06.2024",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "CODE",
-                    "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
-                },
-                {
-                    "id": "3",
-                    "type": "IMAGE",
-                    "src": "",
-                    "title": "Рисунок 1 - скриншот сайта"
-                },
-                {
-                    "id": "4",
-                    "type": "CODE",
-                    "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "14",
-            "title": "Javascript news",
-            "subtitle": "Что нового в Python за 2026 год",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
-            "views": 293,
-            "createdAt": "16.10.2023",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "15",
-            "title": "Javascript news",
-            "subtitle": "Что нового в Kotlin за 2026 год",
-            "img": "https://img.icons8.com/color/1200/kotlin.jpg",
-            "views": 198,
-            "createdAt": "22.04.2026",
-            "userId": "1",
-            "type": ["ECONOMICS"],
-            "blocks": [
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "16",
-            "title": "Javascript news",
-            "subtitle": "Что нового в JS за 2026 год",
-            "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "CODE",
-                    "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
-                },
-                {
-                    "id": "3",
-                    "type": "IMAGE",
-                    "src": "",
-                    "title": "Рисунок 1 - скриншот сайта"
-                },
-                {
-                    "id": "4",
-                    "type": "CODE",
-                    "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "17",
-            "title": "Javascript news",
-            "subtitle": "Что нового в Python за 2026 год",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
-            "views": 2232,
-            "createdAt": "22.12.2025",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "18",
-            "title": "Javascript news",
-            "subtitle": "Что нового в Kotlin за 2026 год",
-            "img": "https://img.icons8.com/color/1200/kotlin.jpg",
-            "views": 2452,
-            "createdAt": "19.03.2024",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "19",
-            "title": "Javascript news",
-            "subtitle": "Что нового в JS за 2026 год",
-            "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
-            "views": 13022,
-            "createdAt": "30.07.2021",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "CODE",
-                    "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
-                },
-                {
-                    "id": "3",
-                    "type": "IMAGE",
-                    "src": "",
-                    "title": "Рисунок 1 - скриншот сайта"
-                },
-                {
-                    "id": "4",
-                    "type": "CODE",
-                    "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "20",
-            "title": "Javascript news",
-            "subtitle": "Что нового в Python за 2026 год",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "21",
-            "title": "Cloud 9",
-            "subtitle": "Что нового в Kotlin за 2026 год",
-            "img": "https://img.icons8.com/color/1200/kotlin.jpg",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "22",
-            "title": "news in code",
-            "subtitle": "Что нового в JS за 2026 год",
-            "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "CODE",
-                    "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
-                },
-                {
-                    "id": "3",
-                    "type": "IMAGE",
-                    "src": "",
-                    "title": "Рисунок 1 - скриншот сайта"
-                },
-                {
-                    "id": "4",
-                    "type": "CODE",
-                    "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "23",
-            "title": "news news news",
-            "subtitle": "Что нового в Python за 2026 год",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "24",
-            "title": "Javascript news not today",
-            "subtitle": "Что нового в Kotlin за 2026 год",
-            "img": "https://img.icons8.com/color/1200/kotlin.jpg",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "25",
-            "title": "news for averyone",
-            "subtitle": "Что нового в JS за 2026 год",
-            "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "CODE",
-                    "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
-                },
-                {
-                    "id": "3",
-                    "type": "IMAGE",
-                    "src": "",
-                    "title": "Рисунок 1 - скриншот сайта"
-                },
-                {
-                    "id": "4",
-                    "type": "CODE",
-                    "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "26",
-            "title": "Javascript hates others",
-            "subtitle": "Что нового в Python за 2026 год",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "27",
-            "title": "Javascript говно",
-            "subtitle": "Что нового в Kotlin за 2026 год",
-            "img": "https://img.icons8.com/color/1200/kotlin.jpg",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "28",
-            "title": "Javascript не говно",
-            "subtitle": "Что нового в JS за 2026 год",
-            "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "CODE",
-                    "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
-                },
-                {
-                    "id": "3",
-                    "type": "IMAGE",
-                    "src": "",
-                    "title": "Рисунок 1 - скриншот сайта"
-                },
-                {
-                    "id": "4",
-                    "type": "CODE",
-                    "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "29",
-            "title": "Any Javascript news?",
-            "subtitle": "Что нового в Python за 2026 год",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "30",
-            "title": "Javascript rulles",
-            "subtitle": "Что нового в Kotlin за 2026 год",
-            "img": "https://img.icons8.com/color/1200/kotlin.jpg",
-            "views": 1022,
-            "createdAt": "26.02.2026",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "Testing Article",
-            "subtitle": "Что нового в Python за 2026 год",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
-            "views": 1022,
-            "createdAt": "17.03.2022",
-            "userId": "1",
-            "type": ["IT"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Заголовок этого блока",
-                    "paragraphs": [
-                        "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
-                        "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
-                        "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
-                    ]
-                }
-            ],
-            "id": "J5kMNQ6"
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         }
-    ],
-    "comments": [
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Javascript news",
+      "subtitle": "Что нового в JS за 2026 год",
+      "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
+      "views": 22,
+      "createdAt": "20.04.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
         {
-            "id": "1",
-            "text": "a comment about post 1",
-            "articledId": "1",
-            "userId": "1"
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         },
         {
-            "id": "2",
-            "text": "another comment about post 1",
-            "articledId": "1",
-            "userId": "2"
+          "id": "2",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
         },
         {
-            "id": "3",
-            "text": "it's not intresting!",
-            "articledId": "1",
-            "userId": "2"
+          "id": "3",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Рисунок 1 - скриншот сайта"
         },
         {
-            "artickId": "1",
-            "userId": 1,
-            "text": "fafsfsa",
-            "id": "tAW9MGR"
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
         },
         {
-            "artickId": "1",
-            "userId": 1,
-            "text": "fafsfsa",
-            "id": "I74D0tc"
-        },
-        {
-            "articleId": "1",
-            "userId": 1,
-            "text": "ffff",
-            "id": "nxop1tp"
-        },
-        {
-            "articleId": "1",
-            "userId": 1,
-            "text": "new comm",
-            "id": "jpHEfvs"
-        },
-        {
-            "articleId": "1",
-            "userId": "2",
-            "text": "comment from user",
-            "id": "rccrfDB"
-        },
-        {
-            "articleId": "1",
-            "userId": "2",
-            "text": "another comm from user",
-            "id": "ZIPdeDG"
-        },
-        {
-            "articleId": "1",
-            "userId": "2",
-            "text": "maybe me or maybe you",
-            "id": "mdOILqV"
-        },
-        {
-            "articleId": "1",
-            "userId": "2",
-            "text": "stop it !",
-            "id": "vFmmWF8"
-        },
-        {
-            "articleId": "1",
-            "userId": "1",
-            "text": "wow",
-            "id": "kTUxWdD"
-        },
-        {
-            "articleId": "1",
-            "userId": "1",
-            "text": "JS Rulles!",
-            "id": "vEegAn-"
-        },
-        {
-            "articleId": "2",
-            "userId": "1",
-            "text": "Python forever!",
-            "id": "2jCizn-"
-        },
-        {
-            "articleId": "3",
-            "userId": "1",
-            "text": "What is Kotlin?!?!",
-            "id": "51iHcFa"
-        },
-        {
-            "articleId": "19",
-            "userId": "1",
-            "text": "wow .. its almost may",
-            "id": "vQgavxp"
-        },
-        {
-            "articleId": "8",
-            "userId": "1",
-            "text": "ffafdsa",
-            "id": "wFzCwum"
-        },
-        {
-            "articleId": "8",
-            "userId": "1",
-            "text": "adsfafs",
-            "id": "cy7aiDz"
-        },
-        {
-            "articleId": "8",
-            "userId": "1",
-            "text": "fasfsaf",
-            "id": "7FOdQSt"
-        },
-        {
-            "articleId": "8",
-            "userId": "1",
-            "text": "fdasf",
-            "id": "6BdOFGE"
-        },
-        {
-            "articleId": "8",
-            "userId": "1",
-            "text": "fasdfsaf",
-            "id": "NILCCEM"
-        },
-        {
-            "articleId": "8",
-            "userId": "1",
-            "text": "fdafsf",
-            "id": "mB9o-nu"
-        },
-        {
-            "articleId": "8",
-            "userId": "1",
-            "text": "fasdfsafsaf",
-            "id": "rLv64iJ"
-        },
-        {
-            "articleId": "4",
-            "userId": "1",
-            "text": "аааа",
-            "id": "RwpICdL"
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         }
-    ],
-    "users": [
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Javascript news",
+      "subtitle": "Что нового в Python за 2026 год",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+      "views": 232,
+      "createdAt": "23.02.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
         {
-            "id": "1",
-            "username": "admin",
-            "password": "123",
-            "roles": ["ADMIN"],
-            "features": {
-                "isArticleRatingEnabled": true,
-                "isCounterEnabled": true
-            },
-            "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
-        },
-        {
-            "id": "2",
-            "username": "user",
-            "password": "777",
-            "roles": ["USER"],
-            "features": {
-                "isArticleRatingEnabled": false,
-                "isCounterEnabled": false
-            },
-            "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
-        },
-        {
-            "id": "3",
-            "username": "manager",
-            "password": "123",
-            "roles": ["MANAGER"],
-            "features": {
-                "isArticleRatingEnabled": false,
-                "isCounterEnabled": true
-            },
-            "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
-        },
-        {
-            "id": "99",
-            "username": "testuser",
-            "password": "testpassword",
-            "roles": ["ADMIN", "MANAGER"],
-            "features": {
-                "isArticleRatingEnabled": true,
-                "isCounterEnabled": true
-            },
-            "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         }
-    ],
-    "profile": [
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Clode news",
+      "subtitle": "Что нового в Kotlin за 2026 год",
+      "img": "https://img.icons8.com/color/1200/kotlin.jpg",
+      "views": 982,
+      "createdAt": "22.11.2023",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
         {
-            "id": "1",
-            "first": "SJ",
-            "lastname": "LK",
-            "age": 39,
-            "currency": "EUR",
-            "country": "Belarus",
-            "city": "Krasnodar",
-            "username": "admin",
-            "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
-        },
-        {
-            "id": "2",
-            "first": "Sergey",
-            "lastname": "admin",
-            "age": 40,
-            "currency": "EUR",
-            "country": "Armenia",
-            "city": "Krasnodar",
-            "username": "sergey",
-            "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
-        },
-        {
-            "id": "3",
-            "first": "Manager",
-            "lastname": "Best",
-            "age": 40,
-            "currency": "EUR",
-            "country": "Armenia",
-            "city": "Krasnodar",
-            "username": "sergey",
-            "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
-        },
-        {
-            "id": "99",
-            "first": "Tester-Yura",
-            "lastname": "God",
-            "age": 99,
-            "currency": "EUR",
-            "country": "Belarus",
-            "city": "Moscow",
-            "username": "bolvanchik",
-            "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         }
-    ],
-    "article-ratings": [
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Python  news",
+      "subtitle": "Что нового в JS за 2026 год",
+      "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
+      "views": 221,
+      "createdAt": "06.02.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
         {
-            "id": "1",
-            "rate": 4,
-            "feedback": "Хорошая статья",
-            "userId": "1",
-            "articleId": "1"
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         },
         {
-            "id": "2",
-            "rate": 3,
-            "feedback": "Норм",
-            "userId": "1",
-            "articleId": "2"
+          "id": "2",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
         },
         {
-            "id": "3",
-            "rate": 2,
-            "feedback": "Говно, не согласен, автор - мудак",
-            "userId": "1",
-            "articleId": "3"
+          "id": "3",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Рисунок 1 - скриншот сайта"
         },
         {
-            "id": "4",
-            "rate": 5,
-            "feedback": "Умничка, много полезного",
-            "userId": "1",
-            "articleId": "4"
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
         },
         {
-            "id": "5",
-            "rate": 2,
-            "feedback": "Ничего не понятно, нихрена не интересно",
-            "userId": "2",
-            "articleId": "2"
-        },
-        {
-            "userId": "1",
-            "articleId": "5",
-            "rate": 4,
-            "id": "lQiu5G-"
-        },
-        {
-            "userId": "1",
-            "articleId": "6",
-            "rate": 1,
-            "id": "d71i86H"
-        },
-        {
-            "userId": "1",
-            "articleId": "8",
-            "rate": 5,
-            "feedback": "",
-            "id": "yOSfQJI"
-        },
-        {
-            "userId": "1",
-            "articleId": "10",
-            "rate": 1,
-            "feedback": "стыдно писать такое, не разьираясь в материале! говно",
-            "id": "F3OzQ7i"
-        },
-        {
-            "userId": "3",
-            "articleId": "30",
-            "rate": 4,
-            "id": "r6GAj74"
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         }
-    ],
-    "profile-ratings": [
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Javascript hot news",
+      "subtitle": "Что нового в Python за 2026 год",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+      "views": 176,
+      "createdAt": "12.05.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
         {
-            "userId": "1",
-            "profileId": "1",
-            "rate": 5,
-            "id": "xW4uo_W"
-        },
-        {
-            "userId": "1",
-            "profileId": "2",
-            "rate": 1,
-            "feedback": "мутный тип",
-            "id": "v7zjRJv"
-        },
-        {
-            "userId": "3",
-            "profileId": "3",
-            "rate": 3,
-            "feedback": "Mudak!!!",
-            "id": "jEguXT4"
-        },
-        {
-            "userId": "1",
-            "profileId": "3",
-            "rate": 2,
-            "id": "jAg_gUQ"
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "id": "9",
+      "title": "any news ?",
+      "subtitle": "Что нового в Kotlin за 2026 год",
+      "img": "https://img.icons8.com/color/1200/kotlin.jpg",
+      "views": 1987,
+      "createdAt": "17.08.2025",
+      "userId": "1",
+      "type": [
+        "ECONOMICS"
+      ],
+      "blocks": [
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Javascript news",
+      "subtitle": "Что нового в JS за 2026 год",
+      "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
+      "views": 1200,
+      "createdAt": "22.04.2024",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Javascript news",
+      "subtitle": "Что нового в Python за 2026 год",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+      "views": 1202,
+      "createdAt": "13.07.2024",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Javascript news",
+      "subtitle": "Что нового в Kotlin за 2026 год",
+      "img": "https://img.icons8.com/color/1200/kotlin.jpg",
+      "views": 3452,
+      "createdAt": "28.09.2025",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Javascript news",
+      "subtitle": "Что нового в JS за 2026 год",
+      "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
+      "views": 294,
+      "createdAt": "18.06.2024",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Javascript news",
+      "subtitle": "Что нового в Python за 2026 год",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+      "views": 293,
+      "createdAt": "16.10.2023",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Javascript news",
+      "subtitle": "Что нового в Kotlin за 2026 год",
+      "img": "https://img.icons8.com/color/1200/kotlin.jpg",
+      "views": 198,
+      "createdAt": "22.04.2026",
+      "userId": "1",
+      "type": [
+        "ECONOMICS"
+      ],
+      "blocks": [
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Javascript news",
+      "subtitle": "Что нового в JS за 2026 год",
+      "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Javascript news",
+      "subtitle": "Что нового в Python за 2026 год",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+      "views": 2232,
+      "createdAt": "22.12.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Javascript news",
+      "subtitle": "Что нового в Kotlin за 2026 год",
+      "img": "https://img.icons8.com/color/1200/kotlin.jpg",
+      "views": 2452,
+      "createdAt": "19.03.2024",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Javascript news",
+      "subtitle": "Что нового в JS за 2026 год",
+      "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
+      "views": 13022,
+      "createdAt": "30.07.2021",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Javascript news",
+      "subtitle": "Что нового в Python за 2026 год",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "title": "Cloud 9",
+      "subtitle": "Что нового в Kotlin за 2026 год",
+      "img": "https://img.icons8.com/color/1200/kotlin.jpg",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "title": "news in code",
+      "subtitle": "Что нового в JS за 2026 год",
+      "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "title": "news news news",
+      "subtitle": "Что нового в Python за 2026 год",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "title": "Javascript news not today",
+      "subtitle": "Что нового в Kotlin за 2026 год",
+      "img": "https://img.icons8.com/color/1200/kotlin.jpg",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "title": "news for averyone",
+      "subtitle": "Что нового в JS за 2026 год",
+      "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "title": "Javascript hates others",
+      "subtitle": "Что нового в Python за 2026 год",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "title": "Javascript говно",
+      "subtitle": "Что нового в Kotlin за 2026 год",
+      "img": "https://img.icons8.com/color/1200/kotlin.jpg",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "title": "Javascript не говно",
+      "subtitle": "Что нового в JS за 2026 год",
+      "img": "https://img.icons8.com/plasticine/1200/javascript-logo.jpg",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonSever.create();\n\nconst .."
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<htmk>\n <body>\n <p id=\"hello\"></p>"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "title": "Any Javascript news?",
+      "subtitle": "Что нового в Python за 2026 год",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "title": "Javascript rulles",
+      "subtitle": "Что нового в Kotlin за 2026 год",
+      "img": "https://img.icons8.com/color/1200/kotlin.jpg",
+      "views": 1022,
+      "createdAt": "26.02.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Testing Article",
+      "subtitle": "Что нового в Python за 2026 год",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png",
+      "views": 1022,
+      "createdAt": "17.03.2022",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют Hello, World!, очень просто. Она выводит куда надпись Hello, World!",
+            "JavaScript - это язык, программы на котором можно выполнять в разных средах. В нашем случае - это браузер",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном ..."
+          ]
+        }
+      ],
+      "id": "J5kMNQ6"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "articledId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "articledId": "1",
+      "userId": "2"
+    },
+    {
+      "id": "3",
+      "text": "it's not intresting!",
+      "articledId": "1",
+      "userId": "2"
+    },
+    {
+      "artickId": "1",
+      "userId": 1,
+      "text": "fafsfsa",
+      "id": "tAW9MGR"
+    },
+    {
+      "artickId": "1",
+      "userId": 1,
+      "text": "fafsfsa",
+      "id": "I74D0tc"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "ffff",
+      "id": "nxop1tp"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "new comm",
+      "id": "jpHEfvs"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "comment from user",
+      "id": "rccrfDB"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "another comm from user",
+      "id": "ZIPdeDG"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "maybe me or maybe you",
+      "id": "mdOILqV"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "stop it !",
+      "id": "vFmmWF8"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "wow",
+      "id": "kTUxWdD"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "JS Rulles!",
+      "id": "vEegAn-"
+    },
+    {
+      "articleId": "2",
+      "userId": "1",
+      "text": "Python forever!",
+      "id": "2jCizn-"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "What is Kotlin?!?!",
+      "id": "51iHcFa"
+    },
+    {
+      "articleId": "19",
+      "userId": "1",
+      "text": "wow .. its almost may",
+      "id": "vQgavxp"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "ffafdsa",
+      "id": "wFzCwum"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "adsfafs",
+      "id": "cy7aiDz"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "fasfsaf",
+      "id": "7FOdQSt"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "fdasf",
+      "id": "6BdOFGE"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "fasdfsaf",
+      "id": "NILCCEM"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "fdafsf",
+      "id": "mB9o-nu"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "fasdfsafsaf",
+      "id": "rLv64iJ"
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "text": "аааа",
+      "id": "RwpICdL"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
+      "jsonSettings": {
+        "theme": "app_light_theme",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false
+      },
+      "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "777",
+      "roles": [
+        "USER"
+      ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": false
+      },
+      "jsonSettings": {
+        "theme": "app_dark_theme",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false
+      },
+      "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": true
+      },
+      "jsonSettings": {
+        "theme": "app_orange_theme",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false
+      },
+      "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+    },
+    {
+      "id": "99",
+      "username": "testuser",
+      "password": "testpassword",
+      "roles": [
+        "ADMIN",
+        "MANAGER"
+      ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
+      "jsonSettings": {
+        "theme": "app_light_theme",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false
+      },
+      "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+    }
+  ],
+  "profile": [
+    {
+      "id": "1",
+      "first": "SJ",
+      "lastname": "LK",
+      "age": 39,
+      "currency": "EUR",
+      "country": "Belarus",
+      "city": "Krasnodar",
+      "username": "admin",
+      "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Sergey",
+      "lastname": "admin",
+      "age": 40,
+      "currency": "EUR",
+      "country": "Armenia",
+      "city": "Krasnodar",
+      "username": "sergey",
+      "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+    },
+    {
+      "id": "3",
+      "first": "Manager",
+      "lastname": "Best",
+      "age": 40,
+      "currency": "EUR",
+      "country": "Armenia",
+      "city": "Krasnodar",
+      "username": "sergey",
+      "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
+    },
+    {
+      "id": "99",
+      "first": "Tester-Yura",
+      "lastname": "God",
+      "age": 99,
+      "currency": "EUR",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "bolvanchik",
+      "avatar": "https://freelance.today/uploads/images/00/07/62/2017/06/13/14c404.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 3,
+      "feedback": "Норм",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "id": "3",
+      "rate": 2,
+      "feedback": "Говно, не согласен, автор - мудак",
+      "userId": "1",
+      "articleId": "3"
+    },
+    {
+      "id": "4",
+      "rate": 5,
+      "feedback": "Умничка, много полезного",
+      "userId": "1",
+      "articleId": "4"
+    },
+    {
+      "id": "5",
+      "rate": 2,
+      "feedback": "Ничего не понятно, нихрена не интересно",
+      "userId": "2",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 4,
+      "id": "lQiu5G-"
+    },
+    {
+      "userId": "1",
+      "articleId": "6",
+      "rate": 1,
+      "id": "d71i86H"
+    },
+    {
+      "userId": "1",
+      "articleId": "8",
+      "rate": 5,
+      "feedback": "",
+      "id": "yOSfQJI"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 1,
+      "feedback": "стыдно писать такое, не разьираясь в материале! говно",
+      "id": "F3OzQ7i"
+    },
+    {
+      "userId": "3",
+      "articleId": "30",
+      "rate": 4,
+      "id": "r6GAj74"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "userId": "1",
+      "profileId": "1",
+      "rate": 5,
+      "id": "xW4uo_W"
+    },
+    {
+      "userId": "1",
+      "profileId": "2",
+      "rate": 1,
+      "feedback": "мутный тип",
+      "id": "v7zjRJv"
+    },
+    {
+      "userId": "3",
+      "profileId": "3",
+      "rate": 3,
+      "feedback": "Mudak!!!",
+      "id": "jEguXT4"
+    },
+    {
+      "userId": "1",
+      "profileId": "3",
+      "rate": 2,
+      "id": "jAg_gUQ"
+    }
+  ]
 }
