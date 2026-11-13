@@ -21,7 +21,7 @@
         "stylelint:scss": "npx stylelint \"**/*.scss\"",
         "stylelint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
         "prepare": "husky",
-        "generate:slice": "node ./scripts/createSlice/index.js"
+        "generate:slice": "node ./scripts/createSlice/index.cjs"
     },
     "lint-staged": {
         "src/**/*.{ts,tsx}": [
