@@ -6,7 +6,7 @@ import { ArticleRating } from '@/features/articleRating';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { toggleFeatures } from '@/shared/lib/features';
+import { ToggleFeatures } from '@/shared/lib/features';
 import { Card } from '@/shared/ui/Card';
 import { VStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page';
@@ -31,19 +31,17 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         articleDetailsPage: articleDetaisPageReducer,
     };
 
-    const ArticleRatingCard = toggleFeatures({
-        name: 'isArticleRatingEnabled',
-        on: () => <ArticleRating articleId={id} />,
-        off: () => <Card max>Оценка статей скоро появится!</Card>,
-    });
-
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
                 <VStack gap="16" max>
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
-                    {ArticleRatingCard}
+                    <ToggleFeatures
+                        on={<ArticleRating articleId={id} />}
+                        off={<Card max>Оценка статей скоро появится!</Card>}
+                        feature={'isArticleRatingEnabled'}
+                    />
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>

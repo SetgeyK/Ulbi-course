@@ -1257,9 +1257,10 @@
         "isCounterEnabled": true
       },
       "jsonSettings": {
-        "theme": "app_orange_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageWasOpened": true
       },
       "avatar": "https://doprof.ru/upload/medialibrary/a5a/programmist.jpg"
     },
