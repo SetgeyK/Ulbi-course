@@ -2,7 +2,9 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getUserInited, initAuthData } from '@/entities/User';
+import { MainLayout } from '@/shared/layouts/MainLayout';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { ToggleFeatures } from '@/shared/lib/features';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import useTheme from '@/shared/lib/hooks/useTheme/useTheme';
 import { Navbar } from '@/widgets/Navbar';
@@ -25,12 +27,23 @@ export const App = () => {
     }
 
     return (
-        <div className={classNames('app', {}, [theme])}>
-            <Navbar />
-            <div className="content-page">
-                <Sidebar />
-                {inited && <AppRouter />}
-            </div>
-        </div>
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+                <div className={classNames('app_redesigned', {}, [theme])}>
+                    <MainLayout content={<AppRouter />} header={<Navbar />} sidebar={<Sidebar />} />
+                    <div className="content-page"></div>
+                </div>
+            }
+            off={
+                <div className={classNames('app', {}, [theme])}>
+                    <Navbar />
+                    <div className="content-page">
+                        <Sidebar />
+                        {inited && <AppRouter />}
+                    </div>
+                </div>
+            }
+        />
     );
 };
