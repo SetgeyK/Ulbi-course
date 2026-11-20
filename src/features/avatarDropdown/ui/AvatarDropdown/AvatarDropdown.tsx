@@ -1,58 +1,57 @@
-import { memo, useCallback } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { memo, useCallback } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
-import {
-    isUserAdmin,
-    userActions,
-    isUserManager,
-    getUserAuthData
-} from '@/entities/User'
-import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import { Avatar } from '@/shared/ui/Avatar'
-import { DropdownMenu } from '@/shared/ui/Popups'
+import { isUserAdmin, userActions, isUserManager, getUserAuthData } from '@/entities/User';
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Avatar } from '@/shared/ui/Avatar';
+import { DropdownMenu } from '@/shared/ui/Popups';
 
 interface AvatarDropdownProps {
-    className?: string
+    className?: string;
 }
 
 export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
-    const dispatch = useDispatch()
-    const isAdmin = useSelector(isUserAdmin)
-    const isManager = useSelector(isUserManager)
-    const authData = useSelector(getUserAuthData)
-    
-    const onLogout = useCallback(() => {
-        dispatch(userActions.logout())
-    }, [dispatch])
-    
-    const isAdminPanelAvalable = isAdmin || isManager
+    const dispatch = useDispatch();
+    const isAdmin = useSelector(isUserAdmin);
+    const isManager = useSelector(isUserManager);
+    const authData = useSelector(getUserAuthData);
 
-    if(!authData) {
-        return null
+    const onLogout = useCallback(() => {
+        dispatch(userActions.logout());
+    }, [dispatch]);
+
+    const isAdminPanelAvalable = isAdmin || isManager;
+
+    if (!authData) {
+        return null;
     }
 
-    return(
-        <DropdownMenu 
-            direction='bottom-left'
+    return (
+        <DropdownMenu
+            direction="bottom-left"
             className={classNames('', {}, [className])}
             items={[
-                ...(isAdminPanelAvalable ? [{
-                    content: 'Админка',
-                    href: getRouteAdminPanel(),
-                }] : []),
-                {   
+                ...(isAdminPanelAvalable
+                    ? [
+                          {
+                              content: 'Админка',
+                              href: getRouteAdminPanel(),
+                          },
+                      ]
+                    : []),
+                {
                     content: 'Профиль',
                     href: getRouteProfile(authData.id),
                 },
                 {
                     content: 'Выйти',
                     onClick: onLogout,
-                }
-                ]}
-                trigger={<Avatar size={30} src={authData.avatar}/>}
-            />
-    )
-})
+                },
+            ]}
+            trigger={<Avatar size={30} src={authData.avatar} />}
+        />
+    );
+});
 
-AvatarDropdown.displayName = 'AvatarDropdown'
+AvatarDropdown.displayName = 'AvatarDropdown';

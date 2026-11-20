@@ -1,7 +1,7 @@
 {
     "name": "projectnew",
     "version": "1.0.0",
-    "type": "module",
+    "type": "commonjs",
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -36,6 +36,7 @@
     "devDependencies": {
         "@eslint/js": "^9.39.2",
         "@sj_lk/eslint-plugin-sj-plugin": "^0.1.10",
+        "@svgr/plugin-svgo": "^8.1.0",
         "@svgr/webpack": "^8.1.0",
         "@testing-library/jest-dom": "^7.0.1",
         "@testing-library/react": "^16.3.3",

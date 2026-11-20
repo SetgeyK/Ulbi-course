@@ -1,58 +1,52 @@
-import { memo } from 'react'
+import { memo } from 'react';
 
-import { ArticleView } from '@/entities/Article'
-import ListIcon from '@/shared/assets/icons/list-24-24.svg'
-import PlateIcon from '@/shared/assets/icons/tiled-24-24.svg'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import { Button, ButtonTheme } from '@/shared/ui/Button'
-import { Icon } from '@/shared/ui/Icon'
+import { ArticleView } from '@/entities/Article';
+import ListIcon from '@/shared/assets/icons/list-24-24.svg';
+import PlateIcon from '@/shared/assets/icons/tiled-24-24.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Icon } from '@/shared/ui/Icon';
 
-import cls from './ArticleViewSelector.module.scss'
+import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {
-    className?: string,
-    view: ArticleView,
-    onViewClick?: (view:ArticleView) => void
+    className?: string;
+    view: ArticleView;
+    onViewClick?: (view: ArticleView) => void;
 }
 
 const viewsTypes = [
     {
         view: ArticleView.PLATE,
-        icon: PlateIcon
+        icon: PlateIcon,
     },
     {
         view: ArticleView.LIST,
-        icon: ListIcon
-    }
-]
+        icon: ListIcon,
+    },
+];
 
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
-    const {
-        className,
-        view,
-        onViewClick
-    } = props
+    const { className, view, onViewClick } = props;
 
     const onClick = (newView: ArticleView) => () => {
-        onViewClick?.(newView)
-    }
+        onViewClick?.(newView);
+    };
 
-    return(
+    return (
         <div className={classNames('', {}, [className])}>
             {viewsTypes.map((viewType) => (
-                <Button
-                    key={viewType.view}
-                    theme={ButtonTheme.CLEAR}
-                    onClick={onClick(viewType.view)}
-                >
-                    <Icon 
+                <Button key={viewType.view} theme={ButtonTheme.CLEAR} onClick={onClick(viewType.view)}>
+                    <Icon
                         Svg={viewType.icon}
-                        className={classNames('', {[cls.notSelected]: viewType.view !== view})}
+                        width={24}
+                        height={24}
+                        className={classNames('', { [cls.notSelected]: viewType.view !== view })}
                     />
                 </Button>
             ))}
         </div>
-    )
-})
+    );
+});
 
-ArticleViewSelector.displayName = 'ArticleViewSelector'
+ArticleViewSelector.displayName = 'ArticleViewSelector';

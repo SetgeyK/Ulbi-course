@@ -1,26 +1,27 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    // "module": "es6",
-    "module": "esnext",
-    "target": "es6",
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "strict": true,
-    // "moduleResolution": "node",
-    "moduleResolution": "bundler",
-    // "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "isolatedModules": true
-  },
-  "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS",
-    }
-  }
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        // "module": "es6",
+        "module": "esnext",
+        "target": "es6",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "strict": true,
+        // "moduleResolution": "node",
+        "moduleResolution": "bundler",
+        // "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "isolatedModules": true
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "exclude": ["node_modules", "cypress", "cypress.config.ts", "**/*.test.ts", "**/*.test.tsx", "**/*.stories.tsx"]
 }
