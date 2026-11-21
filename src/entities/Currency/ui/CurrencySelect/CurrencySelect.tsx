@@ -1,37 +1,40 @@
-import { memo, useCallback } from 'react'
-import { Currency } from '../../model/types/currency'
-import { Listbox } from '@/shared/ui/Popups'
+import { memo, useCallback } from 'react';
+import { Currency } from '../../model/types/currency';
+import { Listbox } from '@/shared/ui/deprecated/Popups';
 
 interface CurrencySelectProps {
-    className?: string,
-    value?: Currency,
-    onChange?: (value: Currency) => void,
-    readonly?: boolean
+    className?: string;
+    value?: Currency;
+    onChange?: (value: Currency) => void;
+    readonly?: boolean;
 }
 
 const options = [
-    {value: Currency.RUB, content: Currency.RUB},
-    {value: Currency.EUR, content: Currency.EUR},
-    {value: Currency.USD, content: Currency.USD}
-]
+    { value: Currency.RUB, content: Currency.RUB },
+    { value: Currency.EUR, content: Currency.EUR },
+    { value: Currency.USD, content: Currency.USD },
+];
 
 export const CurrencySelect = memo(({ className, value, onChange, readonly }: CurrencySelectProps) => {
-    const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Currency)
-    }, [onChange])
+    const onChangeHandler = useCallback(
+        (value: string) => {
+            onChange?.(value as Currency);
+        },
+        [onChange],
+    );
 
     return (
-        <Listbox 
+        <Listbox
             items={options}
             value={value}
             className={className}
-            defaultValue='Укажите валюту'
+            defaultValue="Укажите валюту"
             onChange={onChangeHandler}
-            label='Укажите валюту'
+            label="Укажите валюту"
             readonly={readonly}
-            direction='top-right'
+            direction="top-right"
         />
-    )
-})
+    );
+});
 
-CurrencySelect.displayName = 'CurrencySelect'
+CurrencySelect.displayName = 'CurrencySelect';

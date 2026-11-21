@@ -1,20 +1,17 @@
-import { memo } from 'react'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './ArticleListItem.module.scss'
-import { ArticleView } from '../../modal/consts/articleConsts'
-import { Card } from '@/shared/ui/Card'
-import { Skeleton } from '@/shared/ui/Skeleton'
+import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './ArticleListItem.module.scss';
+import { ArticleView } from '../../modal/consts/articleConsts';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 
 interface ArticleListItemSkeletonProps {
-    className?: string,
-    view: ArticleView
+    className?: string;
+    view: ArticleView;
 }
 
-export const ArticleListItemSkeleton = memo(( props: ArticleListItemSkeletonProps) => {
-    const {
-        className,
-        view
-    } = props
+export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps) => {
+    const { className, view } = props;
 
     if (view === ArticleView.LIST) {
         return (
@@ -32,10 +29,10 @@ export const ArticleListItemSkeleton = memo(( props: ArticleListItemSkeletonProp
                     </div>
                 </Card>
             </div>
-        )
+        );
     }
 
-    return(
+    return (
         <div className={classNames(cls.articleListItem, {}, [className, cls[view]])}>
             <Card>
                 <div className={cls.imageWrapper}>
@@ -47,7 +44,7 @@ export const ArticleListItemSkeleton = memo(( props: ArticleListItemSkeletonProp
                 <Skeleton width={150} height={16} className={cls.title} />
             </Card>
         </div>
-    )
-})
+    );
+});
 
-ArticleListItemSkeleton.displayName = 'ArticleListItem'
+ArticleListItemSkeleton.displayName = 'ArticleListItem';

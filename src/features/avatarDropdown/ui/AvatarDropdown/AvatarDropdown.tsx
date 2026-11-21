@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { isUserAdmin, userActions, isUserManager, getUserAuthData } from '@/entities/User';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Avatar } from '@/shared/ui/Avatar';
-import { DropdownMenu } from '@/shared/ui/Popups';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { DropdownMenu } from '@/shared/ui/deprecated/Popups';
 
 interface AvatarDropdownProps {
     className?: string;

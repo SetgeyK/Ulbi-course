@@ -1,41 +1,44 @@
-import { memo, useCallback } from 'react'
+import { memo, useCallback } from 'react';
 
-import { Listbox } from '@/shared/ui/Popups'
+import { Listbox } from '@/shared/ui/deprecated/Popups';
 
-import { Country } from '../../model/types/country'
+import { Country } from '../../model/types/country';
 
 interface CountrySelectProps {
-    className?: string,
-    value?: Country,
-    onChange?: (value: Country) => void,
-    readonly?: boolean
+    className?: string;
+    value?: Country;
+    onChange?: (value: Country) => void;
+    readonly?: boolean;
 }
 
 const options = [
-    {value: Country.Armenia, content: Country.Armenia},
-    {value: Country.Belarus, content: Country.Belarus},
-    {value: Country.Kazakhstan, content: Country.Kazakhstan},
-    {value: Country.Russia, content: Country.Russia},
-    {value: Country.Ukraine, content: Country.Ukraine}
-]
+    { value: Country.Armenia, content: Country.Armenia },
+    { value: Country.Belarus, content: Country.Belarus },
+    { value: Country.Kazakhstan, content: Country.Kazakhstan },
+    { value: Country.Russia, content: Country.Russia },
+    { value: Country.Ukraine, content: Country.Ukraine },
+];
 
 export const CountrySelect = memo(({ className, value, onChange, readonly }: CountrySelectProps) => {
-    const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Country)
-    }, [onChange])
-    
-    return(
-        <Listbox 
+    const onChangeHandler = useCallback(
+        (value: string) => {
+            onChange?.(value as Country);
+        },
+        [onChange],
+    );
+
+    return (
+        <Listbox
             items={options}
             value={value}
             className={className}
-            defaultValue='Укажите страну'
+            defaultValue="Укажите страну"
             onChange={onChangeHandler}
             readonly={readonly}
-            label='Укажите страну'
-            direction='top-right'
+            label="Укажите страну"
+            direction="top-right"
         />
-    )
-})
+    );
+});
 
-CountrySelect.displayName = 'CountrySelect'
+CountrySelect.displayName = 'CountrySelect';

@@ -1,66 +1,64 @@
-import { useCallback } from 'react'
-import { useSelector } from 'react-redux'
+import { useCallback } from 'react';
+import { useSelector } from 'react-redux';
 
-import { classNames } from '@/shared/lib/classNames/classNames'
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Button, ButtonTheme } from '@/shared/ui/Button'
-import { Input } from '@/shared/ui/Input'
-import { HStack } from '@/shared/ui/Stack'
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { HStack } from '@/shared/ui/deprecated/Stack';
 
-import cls from './AddCommentForm.module.scss'
-import { getAddCommentFormError, getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors'
-import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice'
-
+import cls from './AddCommentForm.module.scss';
+import { getAddCommentFormError, getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors';
+import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
 
 export interface AddCommentFormProps {
-    className?: string,
-    onSendComment: (text: string) => void
+    className?: string;
+    onSendComment: (text: string) => void;
 }
 
 const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
-    const text = useSelector(getAddCommentFormText)
-    const error = useSelector(getAddCommentFormError)
-    const dispatch = useAppDispatch()
+    const text = useSelector(getAddCommentFormText);
+    const error = useSelector(getAddCommentFormError);
+    const dispatch = useAppDispatch();
 
     const reducers: ReducersList = {
-        addCommentForm: addCommentFormReducer
-    }
+        addCommentForm: addCommentFormReducer,
+    };
 
-    const onCommentTextChange = useCallback((value: string) => {
-        dispatch(addCommentFormActions.setText(value))
-    }, [dispatch])
+    const onCommentTextChange = useCallback(
+        (value: string) => {
+            dispatch(addCommentFormActions.setText(value));
+        },
+        [dispatch],
+    );
 
     const onSendHandler = useCallback(() => {
-        onSendComment(text || '')
-        onCommentTextChange('')
-    }, [text, onSendComment, onCommentTextChange])
+        onSendComment(text || '');
+        onCommentTextChange('');
+    }, [text, onSendComment, onCommentTextChange]);
 
-    return(
+    return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <HStack
                 max
-                justify='between'
+                justify="between"
                 className={classNames(cls.addCommentForm, {}, [className])}
-                data-testid='AddCommentForm'
+                data-testid="AddCommentForm"
             >
-                <Input 
+                <Input
                     className={cls.input}
-                    placeholder='Введите текст комментария'
+                    placeholder="Введите текст комментария"
                     value={text}
                     onChange={onCommentTextChange}
-                    data-testid='AddCommentForm.Input'
+                    data-testid="AddCommentForm.Input"
                 />
-                <Button 
-                    theme={ButtonTheme.OUTLINE}
-                    onClick={onSendHandler}
-                    data-testid='AddCommentForm.Button'
-                >
+                <Button theme={ButtonTheme.OUTLINE} onClick={onSendHandler} data-testid="AddCommentForm.Button">
                     Отправить
                 </Button>
             </HStack>
         </DynamicModuleLoader>
-    )
-}
+    );
+};
 
-export default AddCommentForm
+export default AddCommentForm;

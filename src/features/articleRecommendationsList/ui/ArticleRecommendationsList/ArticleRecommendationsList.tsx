@@ -1,37 +1,29 @@
-import { memo } from 'react'
+import { memo } from 'react';
 
-import { ArticleList } from '@/entities/Article'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import { VStack } from '@/shared/ui/Stack'
-import { Text, TextSize } from '@/shared/ui/Text'
+import { ArticleList } from '@/entities/Article';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { VStack } from '@/shared/ui/deprecated/Stack';
+import { Text, TextSize } from '@/shared/ui/deprecated/Text';
 
-import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi'
+import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi';
 
 interface ArticleRecommendationsListProps {
-    className?: string
+    className?: string;
 }
 
 export const ArticleRecommendationsList = memo((props: ArticleRecommendationsListProps) => {
-    const { className } = props
-    const { isLoading, data: articles, error } = useArticleRecommendationsList(3)
-    if(isLoading || error || !articles) {
-        return null
+    const { className } = props;
+    const { isLoading, data: articles, error } = useArticleRecommendationsList(3);
+    if (isLoading || error || !articles) {
+        return null;
     }
 
     return (
-        <VStack
-            gap='8'
-            className={classNames('', {}, [className])}
-            data-testid='ArticleRecommendationsList'
-        >
-            <Text size={TextSize.L} title='Рекомендуем' className={''} />
-            <ArticleList
-                articles={articles}
-                isLoading={false}
-                target='_blank'
-            />
+        <VStack gap="8" className={classNames('', {}, [className])} data-testid="ArticleRecommendationsList">
+            <Text size={TextSize.L} title="Рекомендуем" className={''} />
+            <ArticleList articles={articles} isLoading={false} target="_blank" />
         </VStack>
-    )
-})
+    );
+});
 
-ArticleRecommendationsList.displayName = 'ArticleRecommendationsList'
+ArticleRecommendationsList.displayName = 'ArticleRecommendationsList';
