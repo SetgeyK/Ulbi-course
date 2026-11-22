@@ -4,43 +4,87 @@
     background: var(--inverted-bg-color);
     position: relative;
     transition: width 0.3s ease;
-}
 
-.switchers {
-    position: absolute;
-    width: 100%;
-    bottom: 20px;
-    display: flex;
-    justify-content: center;
-}
+    .switchers {
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
 
-.collapseBtn {
-    position: absolute;
-    right: -32px;
-    bottom: 32px;
-    z-index: 9;
-}
+    .collapseBtn {
+        position: absolute;
+        right: -32px;
+        bottom: 32px;
+        z-index: 9;
+    }
 
-.items {
-    margin-top: 20px;
-    margin-left: 30px;
+    .items {
+        margin-top: 20px;
+        margin-left: 30px;
+    }
 }
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
-       .switchers {
-            flex-direction: column;
-        }
+    .switchers {
+        flex-direction: column;
+    }
 }   
 
 .sidebarRedesigned {
+    position: relative;
     width: 220px;
     height: 100%;
     background: var(--light-bg-color);
     border-radius: 32px;
+
+    .appLogo {
+        padding-top: 20px;
+    }
+    
+    .items {
+        margin-top: 40px;
+    }
+
+    .collapseBtn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: 9;
+        transform: rotate(90deg);
+    }
+
+    .switchers {
+        position: absolute;
+        width: 100%;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
 }
 
-.appLogo {
-    padding-top: 20px;
+.collapsedRedesigned {
+    width: var(--sidebar-width-collapsed-redesigned);
+
+    .switchers {
+        flex-direction: column;
+    }
+
+    .items {
+        display: flex;
+        align-items: center;
+    }
+
+    .collapseBtn {
+        rotate: (180deg);
+        right: -20px;
+    }
+
+    .switchers {
+        flex-direction: column;
+    }
 }
