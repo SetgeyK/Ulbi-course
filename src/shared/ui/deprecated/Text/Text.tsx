@@ -26,7 +26,7 @@ interface TextProps {
     className?: string;
     title?: string;
     text?: string;
-    theme?: string;
+    theme?: TextTheme;
     align?: TextAlign;
     size?: TextSize;
     //

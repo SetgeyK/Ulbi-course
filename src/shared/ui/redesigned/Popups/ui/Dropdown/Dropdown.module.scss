@@ -1,0 +1,20 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: var(--dark-bg-redesigned);
+
+    :hover {
+        border-radius: 18px;
+    }
+}
+
+.item {
+    padding: 10px 25px;
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--text-redesigned);
+    cursor: pointer;
+}

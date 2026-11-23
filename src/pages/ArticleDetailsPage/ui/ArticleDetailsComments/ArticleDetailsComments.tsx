@@ -5,7 +5,7 @@ import { CommentList } from '@/entities/Comment';
 import { CommentCard } from '@/entities/Comment';
 import { AddCommentForm } from '@/features/addCommentForm';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Text, TextSize } from '@/shared/ui/deprecated/Text';
 
 import cls from './ArticleDetailsComments.module.scss';

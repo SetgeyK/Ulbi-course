@@ -10,7 +10,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
-import { HStack } from '@/shared/ui/deprecated/Stack';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 
 import cls from './Navbar.module.scss';

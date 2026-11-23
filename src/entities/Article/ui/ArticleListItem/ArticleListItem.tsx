@@ -3,7 +3,7 @@ import { HTMLAttributeAnchorTarget, memo } from 'react';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import { getRouteArticleDetail } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppImage } from '@/shared/ui/deprecated/AppImage';
+import { AppImage } from '@/shared/ui/redesigned/AppImage';
 import { AppLink } from '@/shared/ui/deprecated/AppLink';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';

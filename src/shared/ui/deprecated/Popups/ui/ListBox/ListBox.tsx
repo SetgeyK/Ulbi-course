@@ -11,7 +11,7 @@ import { DropdownDirections } from '@/shared/types/ui';
 
 import cls from './ListBox.module.scss';
 import { Button } from '../../../Button/Button';
-import { HStack } from '../../../Stack/index';
+import { HStack } from '../../../../redesigned/Stack/index';
 import popupCls from '../../styles/popup.module.scss';
 
 export interface ListBoxItem {
