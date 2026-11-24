@@ -2,7 +2,9 @@ import { useCallback, useMemo } from 'react';
 
 import { ArticleType } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { TabItem, Tabs } from '@/shared/ui/deprecated/Tabs';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { TabItem, Tabs as TabDeprecated } from '@/shared/ui/deprecated/Tabs';
+import { Tabs } from '@/shared/ui/redesigned/Tabs';
 
 interface ArticleTypeTabsProps {
     className?: string;
@@ -40,5 +42,26 @@ export const ArticleTypeTabs = ({ className, value, onChangeType }: ArticleTypeT
         [onChangeType],
     );
 
-    return <Tabs className={classNames('', {}, [className])} tabs={typeTabs} value={value} onTabClick={onTypeClick} />;
+    return (
+        <ToggleFeatures
+            feature={'isAppRedesigned'}
+            on={
+                <Tabs
+                    className={classNames('', {}, [className])}
+                    tabs={typeTabs}
+                    value={value}
+                    onTabClick={onTypeClick}
+                    direction={'column'}
+                />
+            }
+            off={
+                <TabDeprecated
+                    className={classNames('', {}, [className])}
+                    tabs={typeTabs}
+                    value={value}
+                    onTabClick={onTypeClick}
+                />
+            }
+        />
+    );
 };

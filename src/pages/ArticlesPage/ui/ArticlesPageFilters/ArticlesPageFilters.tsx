@@ -1,88 +1,20 @@
-import { useCallback } from 'react';
-import { useSelector } from 'react-redux';
-
-import { ArticleView, ArticleSortFields, ArticleType } from '@/entities/Article';
 import { ArticleSortSelector } from '@/features/ArticleSortSelector';
 import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
 import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
-import { SortOrder } from '@/shared/types/sort';
 import { Card } from '@/shared/ui/deprecated/Card';
 import { Input } from '@/shared/ui/deprecated/Input';
 
 import cls from './ArticlesPageFilters.module.scss';
-import {
-    getArticlesPageOrder,
-    getArticlesPageSearch,
-    getArticlesPageSort,
-    getArticlesPageType,
-    getArticlesPageView,
-} from '../../modal/selectors/articlesPageSelectors';
-import { fetchArticlesList } from '../../modal/services/fetchArticlesList/fetchArticlesList';
-import { articlesPageAction } from '../../modal/slices/articlesPageSlice';
+import { useArticlesFilters } from '../../lib/hooks/useArticlesFilters';
 
 interface ArticlesPageFiltersProps {
     className?: string;
 }
 
 export const ArticlesPageFilters = ({ className }: ArticlesPageFiltersProps) => {
-    const dispatch = useAppDispatch();
-    const view = useSelector(getArticlesPageView);
-    const order = useSelector(getArticlesPageOrder);
-    const sort = useSelector(getArticlesPageSort);
-    const search = useSelector(getArticlesPageSearch);
-    const type = useSelector(getArticlesPageType);
-
-    const fetchData = useCallback(() => {
-        dispatch(fetchArticlesList({ replace: true }));
-    }, [dispatch]);
-
-    const debounceFetchData = useDebounce(fetchData, 500);
-
-    const onChangeView = useCallback(
-        (view: ArticleView) => {
-            dispatch(articlesPageAction.setView(view));
-        },
-        [dispatch],
-    );
-
-    const onChangeOrder = useCallback(
-        (newOrder: SortOrder) => {
-            dispatch(articlesPageAction.setOrder(newOrder));
-            dispatch(articlesPageAction.setPage(1));
-            fetchData();
-        },
-        [dispatch, fetchData],
-    );
-
-    const onChangeSort = useCallback(
-        (newSort: ArticleSortFields) => {
-            dispatch(articlesPageAction.setSort(newSort));
-            dispatch(articlesPageAction.setPage(1));
-            fetchData();
-        },
-        [dispatch, fetchData],
-    );
-
-    const onChangeSearch = useCallback(
-        (search: string) => {
-            dispatch(articlesPageAction.setSearch(search));
-            dispatch(articlesPageAction.setPage(1));
-            debounceFetchData();
-        },
-        [dispatch, debounceFetchData],
-    );
-
-    const onChangeType = useCallback(
-        (value: ArticleType) => {
-            dispatch(articlesPageAction.setType(value));
-            dispatch(articlesPageAction.setPage(1));
-            fetchData();
-        },
-        [dispatch, fetchData],
-    );
+    const { order, search, type, sort, view, onChangeOrder, onChangeSearch, onChangeSort, onChangeView, onChangeType } =
+        useArticlesFilters();
 
     return (
         <div className={classNames(cls.articlesPageFilters, {}, [className])}>

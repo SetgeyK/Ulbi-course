@@ -3,8 +3,10 @@ import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router';
 
 import { ArticlePageGreeting } from '@/features/articlePageGreeting';
+import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { ToggleFeatures } from '@/shared/lib/features';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Page } from '@/widgets/Page';
 
@@ -15,6 +17,8 @@ import { initAtriclesPage } from '../../modal/services/initArticlesPage/initArti
 import { articlesPageReducer } from '../../modal/slices/articlesPageSlice';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
+import { FiltersContainer } from '../FiltersContainer/FiltersContainer';
+import { ViewSelectorContainer } from '../ViewSelectorContainer/ViewSelectorContainer';
 
 interface ArticlesPageProps {
     className?: string;
@@ -43,19 +47,40 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
         throw new Error();
     }
 
-    return (
-        <DynamicModuleLoader reducers={reducers}>
-            <Page
-                className={classNames(cls.articlesPage, {}, [className])}
-                onScrollEnd={onLoadNextPart}
-                dataTestid="ArticlesPage"
-            >
-                <ArticlesPageFilters />
-                <ArticleInfiniteList />
-                <ArticlePageGreeting />
-            </Page>
-        </DynamicModuleLoader>
+    const content = (
+        <ToggleFeatures
+            feature={'isAppRedesigned'}
+            off={
+                <Page
+                    className={classNames(cls.articlesPage, {}, [className])}
+                    onScrollEnd={onLoadNextPart}
+                    dataTestid="ArticlesPage"
+                >
+                    <ArticlesPageFilters />
+                    <ArticleInfiniteList />
+                    <ArticlePageGreeting />
+                </Page>
+            }
+            on={
+                <StickyContentLayout
+                    content={
+                        <Page
+                            className={classNames(cls.articlesPageRedesigned, {}, [className])}
+                            onScrollEnd={onLoadNextPart}
+                            dataTestid="ArticlesPage"
+                        >
+                            <ArticleInfiniteList />
+                            <ArticlePageGreeting />
+                        </Page>
+                    }
+                    left={<ViewSelectorContainer />}
+                    right={<FiltersContainer />}
+                />
+            }
+        />
     );
+
+    return <DynamicModuleLoader reducers={reducers}>{content}</DynamicModuleLoader>;
 };
 
 export default memo(ArticlesPage);
